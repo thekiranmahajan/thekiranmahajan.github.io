@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { IoGridOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+import NavLinks from "./NavLinks";
+import { HiMiniXMark } from "react-icons/hi2";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   return (
@@ -14,6 +16,12 @@ const Header = () => {
           onClick={() => setIsMenuOpen(true)}
           className="focus:bg-violet text-xl"
         />
+      </div>
+      <div
+        className={`dark:bg-yellow bg-light-blue dark:text-dark-blue absolute bottom-0 left-1/2 z-10 flex h-56 w-full -translate-x-1/2 flex-col p-1 text-white ${isMenuOpen ? "flex translate-y-0" : "hidden translate-y-96"}`}
+      >
+        <NavLinks />
+        <HiMiniXMark className="ml-auto text-2xl" />
       </div>
     </header>
   );
