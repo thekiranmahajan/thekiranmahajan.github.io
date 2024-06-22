@@ -2,7 +2,7 @@ import { Header } from "./components";
 
 const App = () => {
   return (
-    <main className="flex h-[200vh] w-screen flex-col overflow-x-hidden font-space-grotesk">
+    <main className="relative flex min-h-screen w-screen flex-col overflow-x-hidden bg-white font-space-grotesk dark:bg-[#100E34]">
       <Header />
     </main>
   );
