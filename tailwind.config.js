@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         "space-grotesk": ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
+        rajdhani: ['"Rajdhani"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
