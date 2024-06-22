@@ -1,8 +1,10 @@
+import { Header } from "./components";
+
 const App = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center font-space-grotesk text-2xl">
-      App
-    </div>
+    <main className="flex h-[200vh] w-screen flex-col overflow-x-hidden font-space-grotesk">
+      <Header />
+    </main>
   );
 };
 
