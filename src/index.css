@@ -7,3 +7,20 @@
     @apply transition-colors duration-300 hover:text-dark-blue dark:hover:text-violet;
   }
 }
+@layer utilities {
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-400 dark:bg-slate-700;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-light-blue dark:bg-yellow;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-blue dark:bg-violet;
+  }
+}
