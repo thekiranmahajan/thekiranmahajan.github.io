@@ -2,8 +2,9 @@ const NavItem = ({ icon: Icon, label, href }) => {
   return (
     <li className="flex items-center justify-center">
       <a
+        aria-label={label}
         href={href}
-        className="flex cursor-pointer flex-col items-center justify-center gap-1 truncate text-sm font-medium hover:text-dark-blue md:flex-row md:gap-0 dark:text-dark-blue dark:hover:text-violet"
+        className="text-effect flex cursor-pointer flex-col items-center justify-center gap-1 truncate text-sm font-medium md:flex-row md:gap-0 dark:text-dark-blue"
       >
         <Icon className="text-xl md:hidden" />
         {label}

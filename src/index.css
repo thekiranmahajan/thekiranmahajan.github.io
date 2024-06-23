@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-effect {
+    @apply transition-colors duration-300 hover:text-dark-blue dark:hover:text-violet;
+  }
+}
