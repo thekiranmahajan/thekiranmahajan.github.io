@@ -8,10 +8,10 @@ import {
 import { SlGraduation } from "react-icons/sl";
 
 export const navItems = [
-  { icon: IoHomeOutline, label: "Home" },
-  { icon: IoPersonOutline, label: "About" },
-  { icon: IoDocumentTextOutline, label: "Skills" },
-  { icon: SlGraduation, label: "Qualificatons" },
-  { icon: IoCodeOutline, label: "Projects" },
-  { icon: BsChatSquareDots, label: "Contact" },
+  { icon: IoHomeOutline, label: "Home", href: "#home" },
+  { icon: IoPersonOutline, label: "About", href: "#about" },
+  { icon: IoDocumentTextOutline, label: "Skills", href: "#skills" },
+  { icon: SlGraduation, label: "Qualificatons", href: "#qualification" },
+  { icon: IoCodeOutline, label: "Projects", href: "#projects" },
+  { icon: BsChatSquareDots, label: "Contact", href: "#contact" },
 ];
