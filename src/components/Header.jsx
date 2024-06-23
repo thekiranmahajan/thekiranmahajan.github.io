@@ -2,30 +2,23 @@ import { useEffect, useState } from "react";
 import { IoGridOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import NavLinks from "./NavLinks";
 import { HiMiniXMark } from "react-icons/hi2";
+import { setTheme } from "../utils/helper";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedTheme, setSelectedTheme] = useState("light");
+  const [selectedTheme, setSelectedTheme] = useState(
+    localStorage.theme ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"),
+  );
 
-  const setTheme = () => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(preferes-color-scheme:dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
-
-  const addThemeToLocalStorage = (preferance) => {
-    setSelectedTheme(preferance);
-    if (preferance === "theme") localStorage.removeItem("theme");
-    localStorage.theme = preferance;
+  const addThemeToLocalStorage = (preference) => {
+    setSelectedTheme(preference);
+    localStorage.setItem("theme", preference);
   };
 
   useEffect(() => {
-    setTheme();
+    setTheme(selectedTheme);
   }, [selectedTheme]);
 
   return (
