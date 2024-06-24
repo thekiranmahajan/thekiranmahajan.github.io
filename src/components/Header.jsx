@@ -4,20 +4,32 @@ import NavLinks from "./NavLinks";
 import { HiMiniXMark } from "react-icons/hi2";
 import { setTheme } from "../utils/helper";
 import ScrollbarProgress from "./ScrollbarProgress";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState(
     localStorage.theme ||
       (window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"),
   );
-
   const addThemeToLocalStorage = (preference) => {
     setSelectedTheme(preference);
     localStorage.setItem("theme", preference);
   };
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setIsHeaderHidden(true);
+    } else {
+      setIsHeaderHidden(false);
+    }
+  });
 
   useEffect(() => {
     setTheme(selectedTheme);
@@ -26,7 +38,9 @@ const Header = () => {
   return (
     <>
       <ScrollbarProgress />
-      <header className="fixed bottom-0 flex h-12 w-full items-center justify-between bg-light-blue px-5 text-white md:top-0 md:justify-between dark:bg-yellow dark:text-dark-blue">
+      <header
+        className={`fixed bottom-0 flex h-12 w-full items-center justify-between bg-light-blue px-5 text-white md:justify-between md:transition-all md:duration-500 md:ease-in-out dark:bg-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
+      >
         <h1 className="text-effect group cursor-pointer font-rajdhani text-lg font-bold">
           <a href="/">
             Kiran Mahajan
