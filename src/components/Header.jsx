@@ -39,7 +39,7 @@ const Header = () => {
     <>
       <ScrollbarProgress />
       <header
-        className={`fixed bottom-0 flex h-12 w-full items-center justify-between bg-light-blue px-5 text-white md:justify-between md:transition-all md:duration-500 md:ease-in-out dark:bg-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
+        className={`fixed bottom-0 z-10 flex h-12 w-full items-center justify-between bg-light-blue px-5 text-white md:justify-between md:transition-all md:duration-500 md:ease-in-out dark:bg-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
       >
         <h1 className="text-effect group cursor-pointer font-rajdhani text-lg font-bold">
           <a href="/">
@@ -53,14 +53,14 @@ const Header = () => {
         <nav className="ml-auto hidden w-3/4 px-5 md:flex">
           <NavLinks />
         </nav>
-        <div className="flex h-full w-16 items-center justify-between px-1 md:relative md:w-10 md:justify-center">
+        <div className="flex h-full w-16 items-center justify-between md:relative md:w-10 md:justify-center">
           <button
             aria-label="Switch to light theme"
             onClick={() => addThemeToLocalStorage("light")}
-            className={`text-effect text-xl transition-transform md:absolute ${
+            className={`text-effect absolute text-xl transition-transform ${
               selectedTheme === "dark"
-                ? "block scale-100 opacity-100"
-                : "pointer-events-none hidden scale-0 opacity-0"
+                ? "block rotate-90 scale-100 opacity-100"
+                : "pointer-events-none rotate-0 scale-0 opacity-0"
             }`}
           >
             <IoSunnyOutline />
@@ -69,7 +69,7 @@ const Header = () => {
           <button
             aria-label="Switch to dark theme"
             onClick={() => addThemeToLocalStorage("dark")}
-            className={`text-effect text-xl transition-transform md:absolute ${
+            className={`text-effect absolute text-xl transition-transform ${
               selectedTheme === "light"
                 ? "block rotate-0 scale-100 opacity-100"
                 : "pointer-events-none rotate-90 scale-0 opacity-0"
@@ -80,14 +80,14 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open menu"
-            className="text-effect text-xl md:hidden"
+            className="text-effect ml-auto text-xl md:hidden"
           >
             <IoGridOutline />
           </button>
         </div>
 
         <div
-          className={`absolute bottom-0 left-1/2 right-0 z-10 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden dark:bg-yellow ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
+          className={`absolute bottom-0 left-1/2 right-0 z-20 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden dark:bg-yellow ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
         >
           <nav className="flex h-full w-full">
             <NavLinks />
