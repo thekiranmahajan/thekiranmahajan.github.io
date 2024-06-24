@@ -1,11 +1,5 @@
-import { ScrambleText } from "../components";
-
 const About = () => {
-  return (
-    <section id="about" className="h-96">
-      <ScrambleText text="Kiran Mahajan" />
-    </section>
-  );
+  return <section id="about" className="h-96"></section>;
 };
 
 export default About;

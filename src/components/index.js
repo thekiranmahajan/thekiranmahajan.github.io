@@ -1,3 +1,3 @@
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
-export { default as ScrambleText } from "./ScrambleText";
+export { default as EncryptTextEffect } from "./EncryptTextEffect";
