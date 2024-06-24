@@ -6,7 +6,7 @@ import EncryptTextEffect from "./EncryptTextEffect";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-auto flex h-80 w-full flex-col items-center bg-black px-5 pt-5 text-white md:h-60 md:pt-0">
+    <footer className="mt-auto flex h-80 w-full select-none flex-col items-center bg-black px-5 pt-5 text-white md:h-60 md:select-all md:pt-0">
       <div className="flex w-full justify-between gap-4 md:mt-6 lg:w-7/12">
         <div className="mt-10 md:mt-4">
           <div className="flex cursor-no-drop font-rajdhani text-3xl font-extrabold md:text-4xl">
