@@ -5,6 +5,7 @@ import {
   animate,
 } from "framer-motion";
 import { useEffect } from "react";
+import rocket from "../assets/rocket.png";
 
 const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -19,21 +20,37 @@ const Home = () => {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
 
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-inherit text-gray-200 md:pt-16"
+      className="relative flex min-h-screen w-full flex-col-reverse items-center justify-center gap-5 px-10 md:flex-row md:items-start md:justify-around md:pt-44"
     >
-      <motion.div
+      <div className="dark:text-white">
+        <h3>Hi,👋🏻 I&apos;m</h3>
+        <h1 className="font-rajdhani text-8xl font-extrabold">Kiran</h1>
+        <h1 className="font-rajdhani text-9xl font-extrabold leading-[4.7rem]">
+          Mahajan
+          <span>.</span>
+        </h1>
+      </div>
+      <div draggable="false" className="h-72 w-72">
+        <img
+          className="pointer-events-none h-full w-full rotate-90 scale-[-1] select-none object-contain object-center"
+          src={rocket}
+          alt="rocket"
+        />
+      </div>
+
+      {/* <motion.div
         style={{
           backgroundImage,
         }}
         className="flex h-64 w-64 cursor-not-allowed select-none items-center justify-center rounded-full shadow-xl drop-shadow-lg"
       >
         <span className="text-7xl text-red-500">K</span>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
