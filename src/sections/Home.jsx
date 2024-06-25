@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full flex-col-reverse items-center justify-center gap-5 px-10 md:flex-row md:items-start md:justify-around md:pt-44"
+      className="relative flex min-h-screen w-full flex-col-reverse items-center justify-center gap-5 md:flex-row md:items-start md:justify-around md:px-5 md:pt-44 lg:w-4/5"
     >
       <div className="dark:text-white">
         <h3>Hi,👋🏻 I&apos;m</h3>
