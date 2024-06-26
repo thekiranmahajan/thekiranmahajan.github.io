@@ -8,13 +8,13 @@ const FlipTextEffect = ({ children }) => {
       initial="initial"
       whileHover="hovered"
       whileTap="hovered"
-      className="relative select-none overflow-hidden whitespace-nowrap font-rajdhani text-6xl font-extrabold uppercase leading-3 sm:text-7xl md:text-8xl lg:text-8xl"
+      className="relative w-fit cursor-pointer select-none overflow-hidden whitespace-nowrap font-rajdhani text-6xl font-extrabold uppercase leading-3 sm:text-7xl md:text-8xl lg:text-8xl"
       style={{ lineHeight: 0.75 }}
     >
       <h1 className="">
         {children.split("").map((char, index) => (
           <motion.span
-            className="inline-block bg-gradient-to-r from-blue-800 to-indigo-900 bg-clip-text text-transparent"
+            className="inline-block bg-gradient-to-r from-violet to-light-blue bg-clip-text text-transparent"
             variants={{
               initial: { y: "0" },
               hovered: { y: "-100%" },
@@ -33,7 +33,7 @@ const FlipTextEffect = ({ children }) => {
       <h1 className="absolute inset-0">
         {children.split("").map((char, index) => (
           <motion.span
-            className="inline-block bg-gradient-to-r from-blue-800 to-indigo-900 bg-clip-text text-transparent"
+            className="inline-block bg-gradient-to-r from-violet to-light-blue bg-clip-text text-transparent"
             variants={{
               initial: { y: "100%" },
               hovered: { y: "0" },
