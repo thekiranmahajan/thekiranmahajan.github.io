@@ -22,3 +22,6 @@ export const CHARACTERS =
   "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()-_=+[]{}\\|;:'\",.<>?`~";
 export const CYCLE_PER_CHARACTER = 2;
 export const SHUFFLE_TIME = 50;
+
+// EncryptTextEffectV2
+export const DELAY_TIME = 1500;
