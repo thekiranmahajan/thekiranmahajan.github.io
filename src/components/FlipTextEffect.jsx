@@ -14,7 +14,7 @@ const FlipTextEffect = ({ children }) => {
       <h1 className="">
         {children.split("").map((char, index) => (
           <motion.span
-            className="custom-text-bg inline-block bg-clip-text text-transparent"
+            className="inline-block bg-gradient-to-r from-blue-800 to-indigo-900 bg-clip-text text-transparent"
             variants={{
               initial: { y: "0" },
               hovered: { y: "-100%" },
@@ -33,7 +33,7 @@ const FlipTextEffect = ({ children }) => {
       <h1 className="absolute inset-0">
         {children.split("").map((char, index) => (
           <motion.span
-            className="inline-block"
+            className="inline-block bg-gradient-to-r from-blue-800 to-indigo-900 bg-clip-text text-transparent"
             variants={{
               initial: { y: "100%" },
               hovered: { y: "0" },
