@@ -68,7 +68,7 @@ const EncryptTextEffectV2 = ({ children }) => {
     };
   }, []);
 
-  return <span className="text-xs">{text}</span>;
+  return <span>{text}</span>;
 };
 
 export default EncryptTextEffectV2;
