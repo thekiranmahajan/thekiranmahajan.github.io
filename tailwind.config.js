@@ -11,7 +11,7 @@ export default {
       },
       colors: {
         yellow: "#FFBF18",
-        white: "#FFFFFF",
+        white: "#E5E5F7",
         black: "#100E1B",
         violet: "#6F01Ec",
         "dark-blue": "#100E34",
