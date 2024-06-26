@@ -6,7 +6,7 @@ const About = () => {
       id="about"
       className="flex h-screen w-full flex-col items-center lg:w-4/5 dark:text-white"
     >
-      <SectionHeading firstText="ABOUT" secondText="ME" />
+      <SectionHeading headingText="About" />
     </section>
   );
 };

@@ -6,7 +6,7 @@ const Contact = () => {
       id="contact"
       className="flex h-screen w-full flex-col items-center lg:w-4/5 dark:text-white"
     >
-      <SectionHeading firstText="CONTACT" secondText="ME" />
+      <SectionHeading headingText="Contact" />
     </section>
   );
 };
