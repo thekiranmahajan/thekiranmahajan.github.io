@@ -17,7 +17,7 @@ export const navItems = [
   { icon: IoMailOutline, label: "Contact", href: "#contact" },
 ];
 
-// EncryptTextEffect
+// EncryptTextEffect + V2
 export const CHARACTERS =
   "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()-_=+[]{}\\|;:'\",.<>?`~";
 export const CYCLE_PER_CHARACTER = 2;
