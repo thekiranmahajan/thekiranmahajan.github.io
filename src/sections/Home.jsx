@@ -1,7 +1,10 @@
-import { FaArrowRight } from "react-icons/fa6";
 import rocket from "../assets/rocket.png";
-import { EncryptTextEffectV2, FlipTextEffect } from "../components";
-import { LuMouse } from "react-icons/lu";
+import {
+  EncryptTextEffectV2,
+  FlipTextEffect,
+  ArrowButton,
+} from "../components";
+import { LuMouse, LuSendHorizonal } from "react-icons/lu";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -22,9 +25,7 @@ const Home = () => {
               Developer Software Engineer
             </EncryptTextEffectV2>
           </p>
-          <button className="mt-8 flex h-10 w-28 items-center justify-center gap-2 rounded-md bg-gradient-to-r from-violet to-light-blue font-semibold text-white">
-            Resume <FaArrowRight />
-          </button>
+          <ArrowButton btnText="Contact" btnIcon={<LuSendHorizonal />} />
         </div>
         <motion.div
           initial={{
