@@ -22,12 +22,11 @@ const About = () => {
           <a href="https://en.wikipedia.org/wiki/Kirron_Kher" target="_blank">
             !Kher
           </a>
-          ) a 23 Y/O CSE Undergrad based in Maharashtra, India. With over 3
-          years of learning and project experience, I am passionate about
-          Software Development, particularly UI/UX Design and Frontend
-          Development. I specialize in the JavaScript ecosystem, where I bring
-          complex projects to life, ensuring they are both functional and
-          aesthetically pleasing.
+          ) a 23 Y/O CSE Grad based in Maharashtra, India. With over 3 years of
+          learning and project experience, I am passionate about Software
+          Development, particularly UI/UX Design and Frontend Development. I
+          specialize in the JavaScript ecosystem, where I bring complex projects
+          to life, ensuring they are both functional and aesthetically pleasing.
         </p>
       </div>
     </section>
