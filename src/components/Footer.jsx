@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="mt-10 md:mt-4">
           <div className="flex cursor-no-drop font-rajdhani text-3xl font-extrabold md:text-4xl">
             <EncryptTextEffect>Kiran Mahajan</EncryptTextEffect>
-            <span className="text-yellow dark:text-violet">.</span>
+            <span className="dark:text-custom-violet text-yellow">.</span>
           </div>
           <h3 className="text-sm text-gray-200 md:text-base">
             Software Development Engineer

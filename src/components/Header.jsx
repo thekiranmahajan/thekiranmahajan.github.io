@@ -45,7 +45,7 @@ const Header = () => {
         <h1 className="text-effect group cursor-pointer font-rajdhani text-lg font-bold">
           <a href="/">
             Kiran Mahajan
-            <span className="text-yellow group-hover:text-white dark:text-violet group-hover:dark:text-dark-blue">
+            <span className="dark:text-custom-violet text-yellow group-hover:text-white group-hover:dark:text-dark-blue">
               .
             </span>
           </a>
