@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-const DELAY_IN_MS = 2500;
-const TRANSITION_DURATION_IN_SEC = 1.5;
+import { DELAY_IN_MS, TRANSITION_DURATION_IN_SEC } from "../utils/constants";
 
 const LogoItemsFlipper = ({ items }) => {
   const intervalRef = useRef(null);

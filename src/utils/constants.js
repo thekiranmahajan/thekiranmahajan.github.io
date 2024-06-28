@@ -25,3 +25,7 @@ export const SHUFFLE_TIME = 50;
 
 // EncryptTextEffectV2
 export const DELAY_TIME = 1500;
+
+// LogoItemsFlipper
+export const DELAY_IN_MS = 2500;
+export const TRANSITION_DURATION_IN_SEC = 1;
