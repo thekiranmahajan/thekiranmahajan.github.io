@@ -10,11 +10,11 @@ export default {
         rajdhani: ['"Rajdhani"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        yellow: "#FFBF18",
         // white: "#E5E5F7",
         white: "#FFFFFF",
         black: "#100E1B",
-        'custom-violet': "#6F01Ec",
+        "custom-yellow": "#FFBF18",
+        "custom-violet": "#6F01Ec",
         "dark-blue": "#100E34",
         "light-blue": "#4F48EC",
       },

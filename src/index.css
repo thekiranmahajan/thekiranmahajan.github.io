@@ -4,7 +4,7 @@
 
 @layer components {
   .text-effect {
-    @apply dark:hover:text-custom-violet transition-colors duration-300 hover:text-dark-blue;
+    @apply transition-colors duration-300 hover:text-dark-blue dark:hover:text-custom-violet;
   }
 }
 @layer utilities {
@@ -17,10 +17,10 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-light-blue dark:bg-yellow;
+    @apply dark:bg-custom-yellow bg-light-blue;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply dark:bg-custom-violet bg-dark-blue;
+    @apply bg-dark-blue dark:bg-custom-violet;
   }
 }
