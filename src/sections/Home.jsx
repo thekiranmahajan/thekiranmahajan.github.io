@@ -11,10 +11,10 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full flex-col items-center gap-5 p-10 px-4 md:px-5 md:pt-44 lg:w-4/5"
+      className="relative flex min-h-screen w-full flex-col items-center gap-5 p-10 px-4 text-black md:px-5 md:pt-44 lg:w-4/5 dark:text-white"
     >
       <div className="flex h-full w-full flex-col-reverse items-center md:flex-row md:items-start md:justify-around">
-        <div className="w-fit overflow-hidden dark:text-white">
+        <div className="w-fit overflow-hidden">
           <h3 className="text-lg font-semibold">Hello,👋🏽 I&apos;m</h3>
           <FlipTextEffect>Kiran</FlipTextEffect>
           <FlipTextEffect>Mahajan.</FlipTextEffect>
