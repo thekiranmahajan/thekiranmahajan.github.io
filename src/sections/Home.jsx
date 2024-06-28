@@ -15,7 +15,7 @@ const Home = () => {
     >
       <div className="flex h-full w-full flex-col-reverse items-center md:flex-row md:items-start md:justify-around">
         <div className="w-fit overflow-hidden">
-          <h3 className="text-lg font-semibold">Hello,👋🏽 I&apos;m</h3>
+          <h1 className="text-lg font-semibold">Hello,👋🏽 I&apos;m</h1>
           <FlipTextEffect>Kiran</FlipTextEffect>
           <FlipTextEffect>Mahajan.</FlipTextEffect>
           <p className="text-sm font-bold md:text-base">
