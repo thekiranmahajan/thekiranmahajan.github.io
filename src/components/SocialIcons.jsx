@@ -2,9 +2,10 @@ import { SOCIAL_ICONS } from "../utils/constants";
 
 const SocialIcons = () => {
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-full w-full items-center gap-6 py-4">
       {SOCIAL_ICONS.map((social) => (
         <a
+          className="text-xl transition-all duration-300 hover:scale-110 hover:text-custom-yellow active:scale-95 sm:text-2xl hover:-translate-y-1"
           target="_blank"
           rel="noopener noreferrer"
           key={social.label}
