@@ -5,5 +5,3 @@ export const setTheme = (theme) => {
     document.documentElement.classList.remove("dark");
   }
 };
-
-

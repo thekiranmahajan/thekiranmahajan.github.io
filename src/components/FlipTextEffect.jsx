@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-const DURATION = 0.25;
-const STAGGER = 0.025;
+import { DURATION, STAGGER } from "../utils/constants";
 
 const FlipTextEffect = ({ children }) => {
   return (
@@ -14,7 +13,7 @@ const FlipTextEffect = ({ children }) => {
       <h1 className="">
         {children.split("").map((char, index) => (
           <motion.span
-            className="from-custom-violet inline-block bg-gradient-to-r to-light-blue bg-clip-text text-transparent"
+            className="inline-block bg-gradient-to-r from-custom-violet to-light-blue bg-clip-text text-transparent"
             variants={{
               initial: { y: "0" },
               hovered: { y: "-100%" },
@@ -33,7 +32,7 @@ const FlipTextEffect = ({ children }) => {
       <h1 className="absolute inset-0">
         {children.split("").map((char, index) => (
           <motion.span
-            className="from-custom-violet inline-block bg-gradient-to-r to-light-blue bg-clip-text text-transparent"
+            className="inline-block bg-gradient-to-r from-custom-violet to-light-blue bg-clip-text text-transparent"
             variants={{
               initial: { y: "100%" },
               hovered: { y: "0" },

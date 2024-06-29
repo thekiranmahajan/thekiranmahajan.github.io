@@ -32,11 +32,13 @@ const About = () => {
             projects to life, ensuring they are both functional and
             aesthetically pleasing.
           </p>
-          <ArrowButton
-            btnText="Resume"
-            btnIcon={<GrCloudDownload />}
-            Link={RESUME_LINK}
-          />
+          <div className="mt-6 xl:mt-12">
+            <ArrowButton
+              btnText="Resume"
+              btnIcon={<GrCloudDownload />}
+              Link={RESUME_LINK}
+            />
+          </div>
         </div>
       </div>
     </section>

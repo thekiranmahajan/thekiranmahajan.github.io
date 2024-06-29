@@ -20,7 +20,7 @@ const Home = () => {
           <h1 className="text-lg font-semibold">Hello,👋🏼 I&apos;m</h1>
           <FlipTextEffect>Kiran</FlipTextEffect>
           <FlipTextEffect>Mahajan.</FlipTextEffect>
-          <p className="text-sm font-bold md:text-base">
+          <p className="pl-2 text-sm font-bold md:text-base">
             a{" "}
             <EncryptTextEffectV2>
               Software Developer Frontend Developer React Developer Web
@@ -30,11 +30,13 @@ const Home = () => {
           <div className="mt-5 pl-2">
             <SocialIcons />
           </div>
-          <ArrowButton
-            btnText="Contact"
-            btnIcon={<LuSendHorizonal />}
-            Link="#contact"
-          />
+          <div className="mt-5 pl-2">
+            <ArrowButton
+              btnText="Contact"
+              btnIcon={<LuSendHorizonal />}
+              Link="#contact"
+            />
+          </div>
         </div>
         <motion.div
           initial={{

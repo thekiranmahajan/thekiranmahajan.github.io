@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <header
-      className={`dark:bg-custom-yellow fixed bottom-0 z-10 flex h-12 w-full flex-col items-center justify-center bg-light-blue px-5 text-white md:transition-all md:duration-500 md:ease-in-out dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
+      className={`fixed bottom-0 z-10 flex h-12 w-full flex-col items-center justify-center bg-light-blue px-5 text-white md:transition-all md:duration-500 md:ease-in-out dark:bg-custom-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
     >
       <ScrollbarProgress />
 
@@ -88,7 +88,7 @@ const Header = () => {
         </div>
 
         <div
-          className={`dark:bg-custom-yellow absolute bottom-0 left-1/2 right-0 z-50 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
+          className={`absolute bottom-0 left-1/2 right-0 z-50 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden dark:bg-custom-yellow ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
         >
           <nav className="flex h-full w-full">
             <NavLinks />

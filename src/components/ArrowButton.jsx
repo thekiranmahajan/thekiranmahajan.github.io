@@ -8,7 +8,7 @@ const ArrowButton = ({
     <a
       href={Link}
       onClick={onClick}
-      className="group relative m-2 mt-5 inline-block h-12 w-32 overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-center text-lg font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300"
+      className="group relative inline-block h-12 w-32 overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-center text-lg font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300"
     >
       {btnText}
 

@@ -17,7 +17,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply dark:bg-custom-yellow bg-light-blue;
+    @apply bg-light-blue dark:bg-custom-yellow;
   }
 
   ::-webkit-scrollbar-thumb:hover {

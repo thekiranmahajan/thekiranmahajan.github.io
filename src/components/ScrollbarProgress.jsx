@@ -5,7 +5,7 @@ const ScrollbarProgress = () => {
   return (
     <motion.div
       style={{ scaleX }}
-      className={`bg-custom-yellow fixed bottom-12 h-[0.2rem] w-full origin-left md:top-0 dark:bg-light-blue`}
+      className={`fixed bottom-12 h-[0.2rem] w-full origin-left bg-custom-yellow md:top-0 dark:bg-light-blue`}
     ></motion.div>
   );
 };
