@@ -8,7 +8,7 @@ import {
 } from "react-icons/io5";
 
 // NavLinks
-export const navItems = [
+export const NAV_ITEMS = [
   { icon: IoHomeOutline, label: "Home", href: "#home" },
   { icon: IoPersonOutline, label: "About", href: "#about" },
   { icon: IoDocumentTextOutline, label: "Skills", href: "#skills" },
@@ -29,3 +29,10 @@ export const DELAY_TIME = 1500;
 // LogoItemsFlipper
 export const DELAY_IN_MS = 2500;
 export const TRANSITION_DURATION_IN_SEC = 1;
+
+// About section
+const GDRIVE_DOWNLOAD_LINK_FORMAT =
+  "https://drive.google.com/uc?export=download&id=";
+
+export const RESUME_LINK =
+  GDRIVE_DOWNLOAD_LINK_FORMAT + "1S_hIL7_4jRWWZiNDhVfddVXz5XmwKZk0";

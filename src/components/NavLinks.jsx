@@ -1,10 +1,10 @@
-import { navItems } from "../utils/constants";
+import { NAV_ITEMS } from "../utils/constants";
 import NavItem from "./NavItem";
 
 const NavLinks = () => {
   return (
     <ul className="grid h-full w-full grid-cols-3 grid-rows-2 gap-4 font-semibold md:flex md:justify-end md:gap-8">
-      {navItems.map((item) => (
+      {NAV_ITEMS.map((item) => (
         <NavItem
           key={item.label}
           icon={item.icon}

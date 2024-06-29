@@ -1,6 +1,7 @@
 import { ArrowButton, SectionHeading, SectionSubHeading } from "../components";
 import profilePic00 from "../assets/ProfilePic00.webp";
 import { GrCloudDownload } from "react-icons/gr";
+import { RESUME_LINK } from "../utils/constants";
 
 const About = () => {
   return (
@@ -34,7 +35,7 @@ const About = () => {
           <ArrowButton
             btnText="Resume"
             btnIcon={<GrCloudDownload />}
-            Link="https://drive.google.com/uc?export=download&id=1S_hIL7_4jRWWZiNDhVfddVXz5XmwKZk0"
+            Link={RESUME_LINK}
           />
         </div>
       </div>
