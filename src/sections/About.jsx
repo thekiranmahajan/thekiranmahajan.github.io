@@ -11,7 +11,7 @@ const About = () => {
     >
       <SectionHeading headingText="About" />
       <SectionSubHeading subHeadingText="Meet Kiran" />
-      <div className="flex h-full w-full flex-col items-center justify-between gap-6 px-3 pt-10 sm:w-11/12 sm:flex-row sm:items-start sm:justify-evenly sm:gap-10 sm:pb-10 sm:pt-16 md:w-4/5 md:gap-14">
+      <div className="flex h-full w-full flex-col items-center justify-between gap-6 px-3 pt-10 sm:w-11/12 sm:flex-row sm:items-start sm:justify-evenly sm:gap-10 sm:pb-10 sm:pt-16 md:w-5/6 md:gap-16 lg:pt-20">
         <div className="flex items-center justify-end sm:w-1/2">
           <img
             className="h-52 w-52 overflow-hidden rounded-xl object-cover object-center shadow-md md:h-64 md:w-64 lg:h-72 lg:w-72"
