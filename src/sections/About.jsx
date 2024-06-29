@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex min-h-screen w-full flex-col items-center pb-10 lg:w-4/5 dark:text-white"
+      className="flex min-h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
     >
       <SectionHeading headingText="About" />
       <SectionSubHeading subHeadingText="Meet Kiran" />

@@ -29,7 +29,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex h-screen w-full flex-col items-center lg:w-4/5 dark:text-white"
+      className="flex h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
     >
       <SectionHeading headingText="Skills" />
       <SectionSubHeading subHeadingText="My Expertise" />
