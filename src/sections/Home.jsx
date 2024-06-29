@@ -25,7 +25,11 @@ const Home = () => {
               Developer Software Engineer
             </EncryptTextEffectV2>
           </p>
-          <ArrowButton btnText="Contact" btnIcon={<LuSendHorizonal />} />
+          <ArrowButton
+            btnText="Contact"
+            btnIcon={<LuSendHorizonal />}
+            Link="#contact"
+          />
         </div>
         <motion.div
           initial={{

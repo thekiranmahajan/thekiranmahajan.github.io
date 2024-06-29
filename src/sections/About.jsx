@@ -1,5 +1,6 @@
-import { SectionHeading, SectionSubHeading } from "../components";
+import { ArrowButton, SectionHeading, SectionSubHeading } from "../components";
 import profilePic00 from "../assets/ProfilePic00.webp";
+import { GrCloudDownload } from "react-icons/gr";
 
 const About = () => {
   return (
@@ -17,17 +18,25 @@ const About = () => {
             alt="Kiran Mahajan's Profile Picture"
           />
         </div>
-        <p className="w-full pb-2 text-center text-gray-900 sm:w-1/2 sm:text-left dark:text-gray-200">
-          Konnichiwa🌸, <br /> Kiran here (
-          <a href="https://en.wikipedia.org/wiki/Kirron_Kher" target="_blank">
-            !Kher
-          </a>
-          ) a 23 Y/O CSE Grad based in Maharashtra, India. With over 3 years of
-          learning and project experience, I am passionate about Software
-          Development, particularly UI/UX Design and Frontend Development. I
-          specialize in the JavaScript ecosystem, where I bring complex projects
-          to life, ensuring they are both functional and aesthetically pleasing.
-        </p>
+        <div className="w-full pb-2 text-center text-gray-900 sm:w-1/2 sm:text-left dark:text-gray-200">
+          <p>
+            Konnichiwa🌸, <br /> Kiran here (
+            <a href="https://en.wikipedia.org/wiki/Kirron_Kher" target="_blank">
+              !Kher
+            </a>
+            ) a 23 Y/O CSE Grad based in Maharashtra, India. With over 3 years
+            of learning and project experience, I am passionate about Software
+            Development, particularly UI/UX Design and Frontend Development. I
+            specialize in the JavaScript ecosystem, where I bring complex
+            projects to life, ensuring they are both functional and
+            aesthetically pleasing.
+          </p>
+          <ArrowButton
+            btnText="Resume"
+            btnIcon={<GrCloudDownload />}
+            Link="https://drive.google.com/uc?export=download&id=1S_hIL7_4jRWWZiNDhVfddVXz5XmwKZk0"
+          />
+        </div>
       </div>
     </section>
   );
