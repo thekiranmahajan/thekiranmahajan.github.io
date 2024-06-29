@@ -27,7 +27,7 @@ const Home = () => {
               Developer Software Engineer
             </EncryptTextEffectV2>
           </p>
-          <div className="mt-5 pl-2">
+          <div className="mt-5 flex h-full w-full items-center gap-6 py-4 pl-2">
             <SocialIcons />
           </div>
           <div className="mt-5 pl-2">

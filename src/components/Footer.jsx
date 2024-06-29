@@ -1,7 +1,5 @@
-import { FaXTwitter } from "react-icons/fa6";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { MdOutlineEmail } from "react-icons/md";
 import EncryptTextEffect from "./EncryptTextEffect";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -19,11 +17,8 @@ const Footer = () => {
             Software Development Engineer
           </h3>
         </div>
-        <div className="flex h-full flex-col items-center justify-center gap-6 text-lg sm:text-xl md:flex-row md:text-2xl">
-          <FiLinkedin />
-          <FiGithub />
-          <MdOutlineEmail />
-          <FaXTwitter />
+        <div className="flex h-full flex-col items-center justify-center gap-4 text-lg sm:gap-6 sm:text-xl md:flex-row md:gap-10 md:text-2xl">
+          <SocialIcons />
         </div>
       </div>
       <div className="mb-20 mt-auto flex w-full items-center justify-center text-xs text-gray-400 sm:text-sm md:mb-10">
