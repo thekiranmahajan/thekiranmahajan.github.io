@@ -3,6 +3,7 @@ import {
   EncryptTextEffectV2,
   FlipTextEffect,
   ArrowButton,
+  SocialIcons,
 } from "../components";
 import { LuMouse, LuSendHorizonal } from "react-icons/lu";
 import { motion } from "framer-motion";
@@ -25,6 +26,7 @@ const Home = () => {
               Developer Software Engineer
             </EncryptTextEffectV2>
           </p>
+          <SocialIcons />
           <ArrowButton
             btnText="Contact"
             btnIcon={<LuSendHorizonal />}

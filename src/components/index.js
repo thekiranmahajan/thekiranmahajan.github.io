@@ -9,3 +9,4 @@ export { default as FlipTextEffect } from "./FlipTextEffect";
 export { default as ArrowButton } from "./ArrowButton";
 export { default as LogoItem } from "./LogoItem";
 export { default as LogoItemsFlipper } from "./LogoItemsFlipper";
+export { default as SocialIcons } from "./SocialIcons";

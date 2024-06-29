@@ -6,6 +6,9 @@ import {
   IoMailOutline,
   IoPersonOutline,
 } from "react-icons/io5";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
 
 // NavLinks
 export const NAV_ITEMS = [
@@ -36,3 +39,27 @@ const GDRIVE_DOWNLOAD_LINK_FORMAT =
 
 export const RESUME_LINK =
   GDRIVE_DOWNLOAD_LINK_FORMAT + "1S_hIL7_4jRWWZiNDhVfddVXz5XmwKZk0";
+
+// SocialIcons
+export const SOCIAL_ICONS = [
+  {
+    icon: FiLinkedin,
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/thekiranmahajan",
+  },
+  {
+    icon: FiGithub,
+    label: "GitHub",
+    link: "https://github.com/thekiranmahajan",
+  },
+  {
+    icon: MdOutlineEmail,
+    label: "Gmail",
+    link: "mailto:thekiranmahajan@gmail.com?subject=Hello%20Kiran&body=I%20would%20like%20to%20get%20in%20touch%20with%20you.",
+  },
+  {
+    icon: FaXTwitter,
+    label: "Twitter",
+    link: "https://twitter.com/thekiranmahajan",
+  },
+];
