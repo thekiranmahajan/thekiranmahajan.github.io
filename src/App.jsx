@@ -1,19 +1,19 @@
 import { useEffect, useRef } from "react";
 import { Footer, Header } from "./components";
 import { About, Contact, Experience, Home, Projects, Skills } from "./sections";
-import useTabVisibility from "./hooks/useTabVisibility";
+import useTabVisibility from "./hooks/useTabFocus";
 
 const App = () => {
   const originalTitleRef = useRef(document.title);
 
-  const onHidden = () => {
+  const onTabBlur = () => {
     document.title = "🥺 Kiran feeling lonely :(";
   };
-  const onVisible = () => {
+  const onTabFocus = () => {
     document.title = originalTitleRef.current;
   };
 
-  useTabVisibility(onHidden, onVisible);
+  useTabVisibility(onTabFocus, onTabBlur);
 
   useEffect(() => {
     const originalTitle = originalTitleRef.current;
