@@ -6,6 +6,9 @@
   .text-effect {
     @apply transition-colors duration-300 hover:text-dark-blue dark:hover:text-custom-violet;
   }
+  .btn-span-effect {
+    @apply absolute -left-2 -top-8 h-32 w-36 origin-left rotate-12 scale-x-0 transform transition-transform group-hover:scale-x-100;
+  }
 }
 @layer utilities {
   ::-webkit-scrollbar {

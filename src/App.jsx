@@ -7,7 +7,7 @@ const App = () => {
   const originalTitleRef = useRef(document.title);
 
   const onHidden = () => {
-    document.title = "🥺 Kiran feeling lonely";
+    document.title = "🥺 Kiran feeling lonely :(";
   };
   const onVisible = () => {
     document.title = originalTitleRef.current;
