@@ -1,3 +1,5 @@
+import ArrowButtonSpan from "./ArrowButtonSpan";
+
 const ArrowButton = ({
   btnIcon,
   btnText = "",
@@ -12,11 +14,11 @@ const ArrowButton = ({
     >
       {btnText}
 
-      <span className="btn-span-effect bg-dark-blue duration-1000 group-hover:duration-500 dark:bg-white"></span>
+      <ArrowButtonSpan className="bg-dark-blue duration-1000 group-hover:duration-500 dark:bg-white" />
 
-      <span className="btn-span-effect bg-custom-yellow duration-700 group-hover:duration-700 dark:bg-light-blue"></span>
+      <ArrowButtonSpan className="bg-custom-yellow duration-700 group-hover:duration-700 dark:bg-light-blue" />
 
-      <span className="btn-span-effect bg-light-blue duration-500 group-hover:duration-1000 dark:bg-custom-yellow"></span>
+      <ArrowButtonSpan className="bg-light-blue duration-500 group-hover:duration-1000 dark:bg-custom-yellow" />
 
       <span className="absolute left-6 top-2.5 z-10 rotate-180 text-xl text-white opacity-0 duration-100 group-hover:left-1/2 group-hover:top-1/2 group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:rotate-0 group-hover:opacity-100 group-hover:duration-1000 dark:text-dark-blue">
         {btnIcon}
