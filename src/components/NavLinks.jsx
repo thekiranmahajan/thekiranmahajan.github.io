@@ -3,7 +3,10 @@ import NavItem from "./NavItem";
 
 const NavLinks = ({ handleMenuClose = () => {} }) => {
   return (
-    <ul className="grid h-full w-full grid-cols-3 grid-rows-2 gap-4 font-semibold md:flex md:justify-end md:gap-8">
+    <ul
+      aria-label="Main navigation menu"
+      className="grid h-full w-full grid-cols-3 grid-rows-2 gap-4 font-semibold md:flex md:justify-end md:gap-8"
+    >
       {NAV_ITEMS.map((item) => (
         <NavItem
           handleMenuClose={handleMenuClose}

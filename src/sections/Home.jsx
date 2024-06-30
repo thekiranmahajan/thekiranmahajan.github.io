@@ -34,6 +34,7 @@ const Home = () => {
               btnText="Contact"
               btnIcon={<LuSendHorizonal />}
               Link="#contact"
+              aria-label="Contact"
             />
           </div>
         </div>

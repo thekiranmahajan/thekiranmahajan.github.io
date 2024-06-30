@@ -21,6 +21,7 @@ const Skills = () => {
               key={logo.logoName}
               className={logo.styles}
               icon={logo.icon}
+              label={logo.logoName}
             />
           ))}
         />

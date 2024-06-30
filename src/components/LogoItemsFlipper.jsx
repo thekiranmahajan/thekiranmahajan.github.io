@@ -23,6 +23,10 @@ const LogoItemsFlipper = ({ items }) => {
         transformStyle: "preserve-3d",
       }}
       className="relative z-0 h-44 w-60 shrink-0 rounded-xl border border-neutral-700 bg-neutral-800"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Logo carousel"
+      aria-live="polite"
     >
       <AnimatePresence mode="sync">
         <motion.div

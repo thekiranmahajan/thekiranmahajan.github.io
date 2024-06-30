@@ -24,6 +24,7 @@ const Header = () => {
 
   return (
     <header
+      aria-live="polite"
       className={`fixed bottom-0 z-10 flex h-12 w-full flex-col items-center justify-center bg-light-blue px-5 text-white md:transition-all md:duration-500 md:ease-in-out dark:bg-custom-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
     >
       <ScrollbarProgress />
@@ -43,7 +44,7 @@ const Header = () => {
         </nav>
         <div className="flex h-full w-16 items-center justify-between md:relative md:w-10 md:justify-center">
           <button
-            aria-label="Switch to light theme"
+            aria-label="Switch to Light Theme"
             onClick={() => setThemePreference("light")}
             className={`text-effect absolute text-xl transition-transform ${
               selectedTheme === "dark"
@@ -55,7 +56,7 @@ const Header = () => {
           </button>
 
           <button
-            aria-label="Switch to dark theme"
+            aria-label="Switch to Dark Theme"
             onClick={() => setThemePreference("dark")}
             className={`text-effect absolute text-xl transition-transform ${
               selectedTheme === "light"
@@ -67,7 +68,9 @@ const Header = () => {
           </button>
           <button
             onClick={handleMenuOpen}
-            aria-label="Open menu"
+            aria-label="Open Menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="main-menu"
             className="text-effect ml-auto text-xl md:hidden"
           >
             <IoGridOutline />
@@ -75,6 +78,8 @@ const Header = () => {
         </div>
 
         <div
+          id="main-menu"
+          aria-hidden={!isMenuOpen}
           ref={menuRef}
           className={`absolute bottom-0 left-1/2 right-0 z-50 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden dark:bg-custom-yellow ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
         >
@@ -84,7 +89,7 @@ const Header = () => {
           <div className="flex h-12 w-full items-center justify-end px-3">
             <button
               onClick={handleMenuClose}
-              aria-label="Close menu"
+              aria-label="Close Menu"
               className="text-effect text-2xl"
             >
               <HiMiniXMark />

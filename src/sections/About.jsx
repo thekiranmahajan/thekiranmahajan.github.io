@@ -24,7 +24,11 @@ const About = () => {
         <div className="w-full pb-2 text-center text-gray-900 sm:w-1/2 sm:text-left dark:text-gray-200">
           <p>
             Konnichiwa🌸, <br /> Kiran here (
-            <a href="https://en.wikipedia.org/wiki/Kirron_Kher" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="https://en.wikipedia.org/wiki/Kirron_Kher"
+              target="_blank"
+            >
               !Kher
             </a>
             ) a 23 Y/O CSE Grad based in Maharashtra, India. With over 3 years
@@ -39,6 +43,7 @@ const About = () => {
               btnText="Resume"
               btnIcon={<GrCloudDownload />}
               Link={RESUME_LINK}
+              aria-label="Download Resume"
             />
           </div>
         </div>

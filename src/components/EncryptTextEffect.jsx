@@ -47,7 +47,12 @@ const EncryptTextEffect = ({ children }) => {
   };
 
   return (
-    <span onMouseEnter={scrambleText} onMouseLeave={stopScrambleText}>
+    <span
+      aria-live="polite"
+      aria-label={children}
+      onMouseEnter={scrambleText}
+      onMouseLeave={stopScrambleText}
+    >
       {text}
     </span>
   );
