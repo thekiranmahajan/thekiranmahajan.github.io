@@ -1,6 +1,6 @@
-const NavItem = ({ icon: Icon, label, href }) => {
+const NavItem = ({ icon: Icon, label, href, handleMenuClose }) => {
   return (
-    <li className="flex items-center justify-center">
+    <li onClick={handleMenuClose} className="flex items-center justify-center">
       <a
         aria-label={label}
         href={href}

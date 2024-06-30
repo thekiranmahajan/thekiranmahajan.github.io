@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoGridOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import NavLinks from "./NavLinks";
 import { HiMiniXMark } from "react-icons/hi2";
@@ -15,6 +15,7 @@ const Header = () => {
         ? "dark"
         : "light"),
   );
+  const menuRef = useRef(null);
   const addThemeToLocalStorage = (preference) => {
     setSelectedTheme(preference);
     localStorage.setItem("theme", preference);
@@ -30,6 +31,30 @@ const Header = () => {
       setIsHeaderHidden(false);
     }
   });
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleOutsideClick = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      handleMenuClose();
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+      document.addEventListener("touchstart", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     setTheme(selectedTheme);
@@ -88,14 +113,15 @@ const Header = () => {
         </div>
 
         <div
+          ref={menuRef}
           className={`absolute bottom-0 left-1/2 right-0 z-50 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden dark:bg-custom-yellow ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
         >
           <nav className="flex h-full w-full">
-            <NavLinks />
+            <NavLinks handleMenuClose={handleMenuClose} />
           </nav>
           <div className="flex h-12 w-full items-center justify-end px-3">
             <button
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleMenuClose}
               aria-label="Close menu"
               className="text-effect text-2xl"
             >
