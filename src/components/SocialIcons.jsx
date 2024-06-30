@@ -10,6 +10,7 @@ const SocialIcons = () => {
           rel="noopener noreferrer"
           key={social.label}
           href={social.link}
+          aria-label={social.label}
         >
           <social.icon />
         </a>
