@@ -1,27 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { IoGridOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import NavLinks from "./NavLinks";
 import { HiMiniXMark } from "react-icons/hi2";
-import { setTheme } from "../utils/helper";
 import ScrollbarProgress from "./ScrollbarProgress";
 import { useScroll, useMotionValueEvent } from "framer-motion";
+import useTheme from "../hooks/useTheme";
+import useMenu from "../hooks/useMenu";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderHidden, setIsHeaderHidden] = useState(false);
-  const [selectedTheme, setSelectedTheme] = useState(
-    localStorage.theme ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"),
-  );
-  const menuRef = useRef(null);
-  const addThemeToLocalStorage = (preference) => {
-    setSelectedTheme(preference);
-    localStorage.setItem("theme", preference);
-  };
-
   const { scrollY } = useScroll();
+  const { selectedTheme, setThemePreference } = useTheme();
+  const { isMenuOpen, handleMenuOpen, handleMenuClose, menuRef } = useMenu();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -31,34 +21,6 @@ const Header = () => {
       setIsHeaderHidden(false);
     }
   });
-
-  const handleMenuClose = () => {
-    setIsMenuOpen(false);
-  };
-
-  const handleOutsideClick = (e) => {
-    if (menuRef.current && !menuRef.current.contains(e.target)) {
-      handleMenuClose();
-    }
-  };
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-      document.addEventListener("touchstart", handleOutsideClick);
-    } else {
-      document.removeEventListener("mousedown", handleOutsideClick);
-      document.removeEventListener("touchstart", handleOutsideClick);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-      document.removeEventListener("touchstart", handleOutsideClick);
-    };
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    setTheme(selectedTheme);
-  }, [selectedTheme]);
 
   return (
     <header
@@ -82,7 +44,7 @@ const Header = () => {
         <div className="flex h-full w-16 items-center justify-between md:relative md:w-10 md:justify-center">
           <button
             aria-label="Switch to light theme"
-            onClick={() => addThemeToLocalStorage("light")}
+            onClick={() => setThemePreference("light")}
             className={`text-effect absolute text-xl transition-transform ${
               selectedTheme === "dark"
                 ? "block rotate-90 scale-100 opacity-100"
@@ -94,7 +56,7 @@ const Header = () => {
 
           <button
             aria-label="Switch to dark theme"
-            onClick={() => addThemeToLocalStorage("dark")}
+            onClick={() => setThemePreference("dark")}
             className={`text-effect absolute text-xl transition-transform ${
               selectedTheme === "light"
                 ? "block rotate-0 scale-100 opacity-100"
@@ -104,7 +66,7 @@ const Header = () => {
             <IoMoonOutline />
           </button>
           <button
-            onClick={() => setIsMenuOpen(true)}
+            onClick={handleMenuOpen}
             aria-label="Open menu"
             className="text-effect ml-auto text-xl md:hidden"
           >
