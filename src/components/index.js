@@ -10,3 +10,5 @@ export { default as ArrowButton } from "./ArrowButton";
 export { default as LogoItem } from "./LogoItem";
 export { default as LogoItemsFlipper } from "./LogoItemsFlipper";
 export { default as SocialIcons } from "./SocialIcons";
+export { default as ScrollDown } from "./ScrollDown";
+export { default as Rocket } from "./Rocket";

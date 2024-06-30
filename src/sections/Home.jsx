@@ -1,13 +1,12 @@
-import rocket from "../assets/rocket.webp";
+import { LuSendHorizonal } from "react-icons/lu";
 import {
   EncryptTextEffectV2,
   FlipTextEffect,
   ArrowButton,
   SocialIcons,
+  ScrollDown,
+  Rocket,
 } from "../components";
-import { LuMouse, LuSendHorizonal } from "react-icons/lu";
-import { motion } from "framer-motion";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const Home = () => {
   return (
@@ -38,35 +37,9 @@ const Home = () => {
             />
           </div>
         </div>
-        <motion.div
-          initial={{
-            x: 30,
-            y: 30,
-          }}
-          animate={{ x: -30, y: -30 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "reverse",
-            duration: 3,
-            ease: "easeInOut",
-          }}
-          className="mb-16 h-36 w-36 md:mb-0 md:mt-5 md:h-44 md:w-44"
-        >
-          <img
-            className="h-full w-full select-none drop-shadow-2xl"
-            src={rocket}
-            alt="rocket"
-          />
-        </motion.div>
+        <Rocket />
       </div>
-      <a
-        href="#about"
-        className="group hidden h-10 items-center gap-1 text-sm transition-all duration-500 hover:translate-y-2 hover:text-light-blue md:mt-12 md:flex xl:mt-20 dark:hover:text-custom-yellow"
-      >
-        <LuMouse className="text-base text-light-blue group-hover:text-custom-yellow dark:text-custom-yellow group-hover:dark:text-custom-violet" />
-        Scroll Down
-        <MdKeyboardDoubleArrowDown className="text-lg text-light-blue group-hover:text-custom-yellow dark:text-custom-yellow group-hover:dark:text-custom-violet" />
-      </a>
+      <ScrollDown />
     </section>
   );
 };
