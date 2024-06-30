@@ -3,12 +3,29 @@ import { SlGraduation } from "react-icons/sl";
 import {
   IoDocumentTextOutline,
   IoHomeOutline,
+  IoLogoCss3,
+  IoLogoGithub,
+  IoLogoHtml5,
+  IoLogoJavascript,
+  IoLogoNodejs,
+  IoLogoVercel,
   IoMailOutline,
   IoPersonOutline,
 } from "react-icons/io5";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaBoxOpen, FaReact, FaXTwitter } from "react-icons/fa6";
+import { RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiBabel,
+  SiGit,
+  SiMongodb,
+  SiPostman,
+  SiRedux,
+  SiVite,
+  SiWebpack,
+} from "react-icons/si";
+import { PiFigmaLogoFill } from "react-icons/pi";
 
 // NavLinks
 export const NAV_ITEMS = [
@@ -67,3 +84,28 @@ export const SOCIAL_ICONS = [
 // FlipTextEffect
 export const DURATION = 0.25;
 export const STAGGER = 0.025;
+
+//Skills
+export const LOGO_ITEM_STYLES = [
+  { logoName: "HTML5", styles: "bg-[#E44D26]", icon: IoLogoHtml5 },
+  { logoName: "CSS3", styles: "bg-[#264DE4]", icon: IoLogoCss3 },
+  { logoName: "JavaScript", styles: "bg-[#EFD81D]", icon: IoLogoJavascript },
+  { logoName: "React", styles: "bg-[#08D9FF]", icon: FaReact },
+  { logoName: "Tailwind CSS", styles: "bg-[#38BDF8]", icon: RiTailwindCssFill },
+  { logoName: "GitHub", styles: "bg-[#171515]", icon: IoLogoGithub },
+  { logoName: "Git", styles: "bg-[#E84D31]", icon: SiGit },
+  { logoName: "Node.js", styles: "bg-[#5FAE4B]", icon: IoLogoNodejs },
+  { logoName: "Redux", styles: "bg-[#7A50BE]", icon: SiRedux },
+  { logoName: "Figma", styles: "bg-[#12D086]", icon: PiFigmaLogoFill },
+  { logoName: "Babel", styles: "bg-[#F5DF63]", icon: SiBabel },
+  {
+    logoName: "Vercel",
+    styles: "bg-[#FFFFFF] !text-black",
+    icon: IoLogoVercel,
+  },
+  { logoName: "Webpack", styles: "bg-[#92D6FA]", icon: SiWebpack },
+  { logoName: "Vite", styles: "bg-[#9F61FC]", icon: SiVite },
+  { logoName: "MongoDB", styles: "bg-[#499C3A]", icon: SiMongodb },
+  { logoName: "Box Open", styles: "bg-[#DFAF7B]", icon: FaBoxOpen },
+  { logoName: "Postman", styles: "bg-[#F26E39]", icon: SiPostman },
+];

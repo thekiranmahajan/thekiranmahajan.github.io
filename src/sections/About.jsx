@@ -11,6 +11,7 @@ const About = () => {
     >
       <SectionHeading headingText="About" />
       <SectionSubHeading subHeadingText="Meet Kiran" />
+
       <div className="flex h-full w-full flex-col items-center justify-between gap-6 px-3 pt-10 sm:w-11/12 sm:flex-row sm:items-start sm:justify-evenly sm:gap-10 sm:pb-10 sm:pt-16 md:w-5/6 md:gap-16 lg:pt-20">
         <div className="flex items-center justify-end sm:w-1/2">
           <img
@@ -19,6 +20,7 @@ const About = () => {
             alt="Kiran Mahajan's Profile Picture"
           />
         </div>
+
         <div className="w-full pb-2 text-center text-gray-900 sm:w-1/2 sm:text-left dark:text-gray-200">
           <p>
             Konnichiwa🌸, <br /> Kiran here (
