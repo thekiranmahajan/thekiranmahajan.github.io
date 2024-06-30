@@ -9,7 +9,6 @@ const FlipTextEffect = ({ children }) => {
       whileTap="hovered"
       className="relative w-fit cursor-pointer select-none overflow-hidden whitespace-nowrap font-rajdhani text-6xl font-extrabold uppercase leading-3 sm:text-7xl md:text-8xl lg:text-8xl"
       style={{ lineHeight: 0.75 }}
-      aria-label={children}
     >
       <h1>
         {children.split("").map((char, index) => (
@@ -25,13 +24,12 @@ const FlipTextEffect = ({ children }) => {
               delay: STAGGER * index,
             }}
             key={index}
-            aria-hidden="true"
           >
             {char}
           </motion.span>
         ))}
       </h1>
-      <h1 aria-hidden="true" className="absolute inset-0">
+      <h1 className="absolute inset-0">
         {children.split("").map((char, index) => (
           <motion.span
             className="inline-block bg-gradient-to-r from-custom-violet to-light-blue bg-clip-text text-transparent"

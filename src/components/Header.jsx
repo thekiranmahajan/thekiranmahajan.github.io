@@ -79,7 +79,6 @@ const Header = () => {
 
         <div
           id="main-menu"
-          aria-hidden={!isMenuOpen}
           ref={menuRef}
           className={`absolute bottom-0 left-1/2 right-0 z-50 flex h-56 w-full -translate-x-1/2 transform flex-col rounded-t-3xl bg-light-blue p-1 pt-6 shadow-2xl transition-transform duration-300 md:hidden dark:bg-custom-yellow ${isMenuOpen ? "flex translate-y-0" : "translate-y-full"} `}
         >

@@ -8,7 +8,6 @@ const ScrollbarProgress = () => {
       role="progressbar"
       aria-valuemin="0"
       aria-valuemax="1"
-      aria-valuenow={scrollYProgress}
       style={{ scaleX }}
       className={`fixed bottom-12 h-[0.2rem] w-full origin-left bg-custom-yellow md:top-0 dark:bg-light-blue`}
     ></motion.div>
