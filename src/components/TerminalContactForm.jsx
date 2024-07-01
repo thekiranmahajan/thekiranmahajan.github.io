@@ -1,6 +1,9 @@
 import { useState } from "react";
 import TerminalStep from "./TerminalStep";
 import TerminalSelectedValue from "./TerminalSelectedValue";
+import ArrowButton from "./ArrowButton";
+import { MdOutlineRestartAlt } from "react-icons/md";
+import { LuSendHorizonal } from "react-icons/lu";
 
 const TerminalContactForm = () => {
   const [step, setStep] = useState("Email");
@@ -39,10 +42,20 @@ const TerminalContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(values);
+  };
+
+  const handleResetValues = () => {
+    setStep("Email");
+    setValues({
+      Email: "",
+      Name: "",
+      Message: "",
+    });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="h-full w-full">
+    <form className="h-full w-full">
       <div className="flex h-10 w-full items-center rounded-t-lg bg-dark-blue px-4">
         <div className="flex items-center gap-1">
           <span className="h-3 w-3 rounded-full bg-red-500"></span>
@@ -104,6 +117,29 @@ const TerminalContactForm = () => {
         )}
         {step === "Preview" && (
           <TerminalSelectedValue selectedValue={values.Message} />
+        )}
+        {step === "Preview" && (
+          <div className="mt-6 flex flex-col gap-3">
+            <h2>Beautiful!, Here is what i have got</h2>
+            <p>Email: {values.Email}</p>
+            <p>Name: {values.Name}</p>
+            <p>Message: {values.Message}</p>
+            <h2>looks good?</h2>
+            <div className="flex items-center gap-2">
+              <ArrowButton
+                Link="#contact"
+                btnIcon={<MdOutlineRestartAlt />}
+                btnText="Reset"
+                onClick={handleResetValues}
+              />
+              <ArrowButton
+                Link="#contact"
+                btnIcon={<LuSendHorizonal />}
+                btnText="Send It"
+                onClick={handleSubmit}
+              />
+            </div>
+          </div>
         )}
       </div>
     </form>
