@@ -12,7 +12,7 @@ import {
   IoMailOutline,
   IoPersonOutline,
 } from "react-icons/io5";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiPhoneCall } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaBoxOpen, FaReact, FaXTwitter } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -82,6 +82,12 @@ export const SOCIAL_PROFILES = [
     label: "Gmail",
     heading: "Copy email to clipboard",
     link: "mailto:thekiranmahajan@gmail.com?subject=Hello%20Kiran&body=I%20would%20like%20to%20get%20in%20touch%20with%20you.",
+  },
+  {
+    icon: FiPhoneCall,
+    label: "Call",
+    heading: "Call and Copy the number",
+    link: "tel:+91 7758829165",
   },
 ];
 

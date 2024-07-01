@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header
       aria-live="polite"
-      className={`fixed bottom-0 z-10 flex h-12 w-full flex-col items-center justify-center bg-light-blue px-5 text-white md:transition-all md:duration-500 md:ease-in-out dark:bg-custom-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
+      className={`fixed bottom-0 z-50 flex h-12 w-full flex-col items-center justify-center bg-light-blue px-5 text-white md:transition-all md:duration-500 md:ease-in-out dark:bg-custom-yellow dark:text-dark-blue ${isHeaderHidden ? "md:-top-12" : "md:top-0"}`}
     >
       <ScrollbarProgress />
 
