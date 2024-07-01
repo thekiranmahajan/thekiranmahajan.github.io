@@ -12,3 +12,4 @@ export { default as LogoItemsFlipper } from "./LogoItemsFlipper";
 export { default as SocialIcons } from "./SocialIcons";
 export { default as ScrollDown } from "./ScrollDown";
 export { default as Rocket } from "./Rocket";
+export { default as SocialCard } from "./SocialCard";
