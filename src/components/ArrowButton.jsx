@@ -11,7 +11,7 @@ const ArrowButton = ({
       href={Link}
       onClick={onClick}
       role="button"
-      aria-label={btnText || "Button"}
+      aria-label={btnText}
       className="group relative inline-block h-12 w-32 overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-center text-lg font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300"
     >
       {btnText}

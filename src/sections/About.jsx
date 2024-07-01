@@ -43,7 +43,6 @@ const About = () => {
               btnText="Resume"
               btnIcon={<GrCloudDownload />}
               Link={RESUME_LINK}
-              aria-label="Download Resume"
             />
           </div>
         </div>
