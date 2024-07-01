@@ -1,6 +1,11 @@
-import { SectionHeading, SectionSubHeading, SocialCard } from "../components";
 import { SOCIAL_PROFILES } from "../utils/constants";
 import { copyToClipboard } from "../utils/helper";
+import {
+  SectionHeading,
+  SectionSubHeading,
+  SocialCard,
+  TerminalContactForm,
+} from "../components";
 
 const Contact = () => {
   const handleCopyEmail = (e) => {
@@ -9,6 +14,7 @@ const Contact = () => {
   const handleCopyPhoneNumber = (e) => {
     copyToClipboard(e, "+91 7758829165");
   };
+
   return (
     <section
       id="contact"
@@ -16,8 +22,8 @@ const Contact = () => {
     >
       <SectionHeading headingText="Contact" />
       <SectionSubHeading subHeadingText="Get in Touch" />
-      <div className="mt-10 flex items-center justify-between">
-        <div className="flex flex-col items-center gap-2">
+      <div className="mt-10 flex h-full w-full flex-col items-center">
+        <div className="flex w-full flex-col items-center gap-2 md:w-1/2">
           {SOCIAL_PROFILES.map((social) => (
             <SocialCard
               key={social.label}
@@ -38,6 +44,9 @@ const Contact = () => {
               }
             />
           ))}
+        </div>
+        <div className="h-full w-full p-4 md:w-1/2">
+          <TerminalContactForm />
         </div>
       </div>
     </section>
