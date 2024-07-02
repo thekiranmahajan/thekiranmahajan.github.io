@@ -5,10 +5,10 @@ import ArrowButton from "./ArrowButton";
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { LuSendHorizonal } from "react-icons/lu";
 import { CONTACT_FORM_STEPS } from "../utils/constants";
+import TerminalQuestion from "./TerminalQuestion";
 
 const TerminalContactForm = () => {
   const [stepIndex, setStepIndex] = useState(0);
-  const currentStep = CONTACT_FORM_STEPS[stepIndex];
   const [values, setValues] = useState({
     Email: "",
     Name: "",
@@ -26,6 +26,7 @@ const TerminalContactForm = () => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
+      const currentStep = CONTACT_FORM_STEPS[stepIndex];
       if (currentStep.validate(values[currentStep.key])) {
         if (stepIndex < CONTACT_FORM_STEPS.length - 1) {
           setStepIndex((prev) => prev + 1);
@@ -64,8 +65,10 @@ const TerminalContactForm = () => {
       <div className="h-full min-h-96 w-full rounded-b-lg bg-dark-blue bg-opacity-60 px-2 py-3 backdrop-blur-lg backdrop-filter">
         <h5> Hey There!, I&apos;m excited to link🔗</h5>
         <hr className="my-2 border border-dashed" />
-
         {stepIndex >= 0 && (
+          <TerminalQuestion currentStep={CONTACT_FORM_STEPS[0]} />
+        )}
+        {stepIndex === 0 && (
           <TerminalStep
             handleValueChange={handleValueChange}
             handleKeyDown={handleKeyDown}
@@ -77,6 +80,9 @@ const TerminalContactForm = () => {
           <TerminalSelectedValue selectedValue={values.Email} />
         )}
         {stepIndex >= 1 && (
+          <TerminalQuestion currentStep={CONTACT_FORM_STEPS[1]} />
+        )}
+        {stepIndex === 1 && (
           <TerminalStep
             handleValueChange={handleValueChange}
             handleKeyDown={handleKeyDown}
@@ -86,6 +92,9 @@ const TerminalContactForm = () => {
         )}
         {stepIndex > 1 && <TerminalSelectedValue selectedValue={values.Name} />}
         {stepIndex >= 2 && (
+          <TerminalQuestion currentStep={CONTACT_FORM_STEPS[2]} />
+        )}
+        {stepIndex === 2 && (
           <TerminalStep
             handleValueChange={handleValueChange}
             handleKeyDown={handleKeyDown}
