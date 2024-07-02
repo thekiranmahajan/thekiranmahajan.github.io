@@ -1,4 +1,3 @@
-import { LuSendHorizonal } from "react-icons/lu";
 import {
   EncryptTextEffectV2,
   FlipTextEffect,
@@ -7,6 +6,7 @@ import {
   ScrollDown,
   Rocket,
 } from "../components";
+import { MdOutlineConnectWithoutContact } from "react-icons/md";
 
 const Home = () => {
   return (
@@ -32,7 +32,7 @@ const Home = () => {
           <div className="mt-5 pl-2">
             <ArrowButton
               btnText="Contact"
-              btnIcon={<LuSendHorizonal />}
+              btnIcon={<MdOutlineConnectWithoutContact />}
               Link="#contact"
             />
           </div>

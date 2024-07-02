@@ -65,13 +65,36 @@ const TerminalContactForm = () => {
         <h5> Hey There!, I&apos;m excited to link🔗</h5>
         <hr className="my-2 border border-dashed" />
 
-        {stepIndex < CONTACT_FORM_STEPS.length && (
+        {stepIndex >= 0 && (
           <TerminalStep
             handleValueChange={handleValueChange}
             handleKeyDown={handleKeyDown}
-            currentStep={currentStep}
+            currentStep={CONTACT_FORM_STEPS[0]}
             values={values}
           />
+        )}
+        {stepIndex > 0 && (
+          <TerminalSelectedValue selectedValue={values.Email} />
+        )}
+        {stepIndex >= 1 && (
+          <TerminalStep
+            handleValueChange={handleValueChange}
+            handleKeyDown={handleKeyDown}
+            currentStep={CONTACT_FORM_STEPS[1]}
+            values={values}
+          />
+        )}
+        {stepIndex > 1 && <TerminalSelectedValue selectedValue={values.Name} />}
+        {stepIndex >= 2 && (
+          <TerminalStep
+            handleValueChange={handleValueChange}
+            handleKeyDown={handleKeyDown}
+            currentStep={CONTACT_FORM_STEPS[2]}
+            values={values}
+          />
+        )}
+        {stepIndex > 2 && (
+          <TerminalSelectedValue selectedValue={values.Message} />
         )}
 
         {stepIndex === CONTACT_FORM_STEPS.length && (

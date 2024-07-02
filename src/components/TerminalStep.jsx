@@ -27,6 +27,7 @@ const TerminalStep = ({
           onKeyDown={handleKeyDown}
           type="text"
           className="border-none bg-transparent outline-none"
+          autoComplete="off"
         />
       </div>
     </>

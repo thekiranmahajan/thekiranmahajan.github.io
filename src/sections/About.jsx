@@ -38,7 +38,7 @@ const About = () => {
             projects to life, ensuring they are both functional and
             aesthetically pleasing.
           </p>
-          <div className="mt-6 xl:mt-12">
+          <div className="mt-6 flex items-center justify-center sm:justify-start xl:mt-12">
             <ArrowButton
               btnText="Resume"
               btnIcon={<GrCloudDownload />}
