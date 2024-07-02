@@ -1,11 +1,9 @@
 import { useState } from "react";
 import TerminalStep from "./TerminalStep";
 import TerminalSelectedValue from "./TerminalSelectedValue";
-import ArrowButton from "./ArrowButton";
-import { MdOutlineRestartAlt } from "react-icons/md";
-import { LuSendHorizonal } from "react-icons/lu";
 import { CONTACT_FORM_STEPS } from "../utils/constants";
 import TerminalQuestion from "./TerminalQuestion";
+import TerminalFormPreview from "./TerminalFormPreview";
 
 const TerminalContactForm = () => {
   const [stepIndex, setStepIndex] = useState(0);
@@ -107,27 +105,11 @@ const TerminalContactForm = () => {
         )}
 
         {stepIndex === CONTACT_FORM_STEPS.length && (
-          <div className="mt-6 flex flex-col gap-3">
-            <h2>Beautiful!, Here is what i have got</h2>
-            <p>Email: {values.Email}</p>
-            <p>Name: {values.Name}</p>
-            <p>Message: {values.Message}</p>
-            <h2>looks good?</h2>
-            <div className="flex items-center gap-2">
-              <ArrowButton
-                Link="#contact-form"
-                btnIcon={<MdOutlineRestartAlt />}
-                btnText="Reset"
-                onClick={handleResetValues}
-              />
-              <ArrowButton
-                Link="#contact-form"
-                btnIcon={<LuSendHorizonal />}
-                btnText="Send It"
-                onClick={handleSubmit}
-              />
-            </div>
-          </div>
+          <TerminalFormPreview
+            handleSubmit={handleSubmit}
+            handleResetValues={handleResetValues}
+            values={values}
+          />
         )}
       </div>
     </form>
