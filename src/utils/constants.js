@@ -119,3 +119,25 @@ export const LOGO_ITEM_STYLES = [
   { logoName: "Box Open", styles: "bg-[#DFAF7B]", icon: FaBoxOpen },
   { logoName: "Postman", styles: "bg-[#F26E39]", icon: SiPostman },
 ];
+
+// TerminalContactForm
+export const CONTACT_FORM_STEPS = [
+  {
+    key: "Email",
+    firstQuestion: "To start, could you provide ",
+    secondQuestion: "your email?",
+    validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+  },
+  {
+    key: "Name",
+    firstQuestion: "Awesome!, What's ",
+    secondQuestion: "your good name?",
+    validate: (value) => value.trim().length > 0,
+  },
+  {
+    key: "Message",
+    firstQuestion: "Perfect!, ",
+    secondQuestion: "how can I help you?",
+    validate: (value) => value.trim().length > 0,
+  },
+];
