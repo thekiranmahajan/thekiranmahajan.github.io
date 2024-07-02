@@ -22,8 +22,8 @@ const Contact = () => {
     >
       <SectionHeading headingText="Contact" />
       <SectionSubHeading subHeadingText="Get in Touch" />
-      <div className="mt-10 flex h-full w-full flex-col items-center">
-        <div className="flex w-full flex-col items-center gap-2 md:w-1/2">
+      <div className="mt-10 flex h-full w-full flex-col items-center gap-4 md:flex-row md:items-start md:justify-stretch md:gap-10">
+        <div className="flex w-2/5 flex-col items-center gap-2 p-4 md:items-end">
           {SOCIAL_PROFILES.map((social) => (
             <SocialCard
               key={social.label}
@@ -45,7 +45,7 @@ const Contact = () => {
             />
           ))}
         </div>
-        <div className="h-full w-full p-4 md:w-1/2">
+        <div className="flex h-full w-full p-4 md:w-3/5">
           <TerminalContactForm />
         </div>
       </div>
