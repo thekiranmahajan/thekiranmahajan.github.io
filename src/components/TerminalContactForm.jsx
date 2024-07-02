@@ -49,8 +49,8 @@ const TerminalContactForm = () => {
     });
   };
   return (
-    <form id="contact-form" className="h-full w-full">
-      <div className="flex h-10 w-full items-center rounded-t-lg bg-dark-blue px-4">
+    <form id="contact-form" className="h-full w-full shadow-lg">
+      <div className="flex h-10 w-full items-center rounded-t-lg bg-black  px-4">
         <div className="flex items-center gap-1">
           <span className="h-3 w-3 rounded-full bg-red-500"></span>
           <span className="h-3 w-3 rounded-full bg-yellow-500"></span>
@@ -60,7 +60,7 @@ const TerminalContactForm = () => {
           Contact@Kiran
         </h2>
       </div>
-      <div className="h-full min-h-96 w-full rounded-b-lg bg-dark-blue bg-opacity-60 px-2 py-3 backdrop-blur-lg backdrop-filter">
+      <div className="h-full min-h-[29.5rem] w-full rounded-b-lg bg-black bg-opacity-70 px-2 py-3 backdrop-blur-lg backdrop-filter text-white">
         <h5> Hey There!, I&apos;m excited to link🔗</h5>
         <hr className="my-2 border border-dashed" />
         {stepIndex >= 0 && (
