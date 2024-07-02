@@ -20,13 +20,12 @@ const TerminalStep = ({
           <span className="pr-2 text-gray-400">Enter {stepName}:</span>
         </p>
         <input
-          autoFocus
           name={stepName}
           value={values[stepName]}
           onChange={handleValueChange}
           onKeyDown={handleKeyDown}
           type="text"
-          className="border-none bg-transparent outline-none"
+          className="border-none bg-transparent caret-green-400 outline-none"
           autoComplete="off"
         />
       </div>
