@@ -6,12 +6,13 @@ const TerminalStep = ({
   handleKeyDown,
   currentStep,
   values,
+  shouldFocus,
 }) => {
   const stepName = currentStep.key;
   const inputRef = useRef(null);
   useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+    if (shouldFocus) inputRef.current.focus();
+  }, [shouldFocus]);
   return (
     <div className="flex h-10 w-full items-center">
       <p className="flex items-center">

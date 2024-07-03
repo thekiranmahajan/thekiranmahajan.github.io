@@ -72,6 +72,7 @@ const TerminalContactForm = () => {
             handleKeyDown={handleKeyDown}
             currentStep={CONTACT_FORM_STEPS[0]}
             values={values}
+            shouldFocus={false}
           />
         )}
         {stepIndex > 0 && (
@@ -86,6 +87,7 @@ const TerminalContactForm = () => {
             handleKeyDown={handleKeyDown}
             currentStep={CONTACT_FORM_STEPS[1]}
             values={values}
+            shouldFocus={stepIndex === 1}
           />
         )}
         {stepIndex > 1 && <TerminalSelectedValue selectedValue={values.Name} />}
@@ -98,6 +100,7 @@ const TerminalContactForm = () => {
             handleKeyDown={handleKeyDown}
             currentStep={CONTACT_FORM_STEPS[2]}
             values={values}
+            shouldFocus={stepIndex === 2}
           />
         )}
         {stepIndex > 2 && (
