@@ -1,5 +1,5 @@
 import { ArrowButton, SectionHeading, SectionSubHeading } from "../components";
-import profilePic00 from "../assets/ProfilePic00.webp";
+import avatar from "../assets/avatar.webp";
 import { GrCloudDownload } from "react-icons/gr";
 import { RESUME_LINK } from "../utils/constants";
 
@@ -16,7 +16,7 @@ const About = () => {
         <div className="flex items-center justify-end sm:w-1/2">
           <img
             className="h-52 w-52 overflow-hidden rounded-xl object-cover object-center shadow-md md:h-64 md:w-64 lg:h-72 lg:w-72"
-            src={profilePic00}
+            src={avatar}
             alt="Kiran Mahajan's Profile Picture"
           />
         </div>
