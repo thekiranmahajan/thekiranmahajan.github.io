@@ -49,7 +49,10 @@ const TerminalContactForm = () => {
     });
   };
   return (
-    <form id="contact-form" className="h-full w-full shadow-lg">
+    <form
+      id="contact-form"
+      className="h-full w-full overflow-hidden text-sm shadow-lg sm:text-base"
+    >
       <div className="flex h-10 w-full items-center rounded-t-lg bg-black px-4">
         <div className="flex items-center gap-1">
           <span className="h-3 w-3 rounded-full bg-red-500"></span>

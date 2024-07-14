@@ -2,8 +2,9 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const TerminalSelectedValue = ({ selectedValue }) => {
   return (
-    <span className="flex items-center gap-3 text-green-400">
-      <IoMdCheckmarkCircleOutline /> {selectedValue}
+    <span className="flex w-full flex-wrap items-center gap-2 overflow-hidden text-sm text-green-400 sm:text-base">
+      <IoMdCheckmarkCircleOutline className="h-4 w-4" />
+      {selectedValue}
     </span>
   );
 };

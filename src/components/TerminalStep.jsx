@@ -29,7 +29,7 @@ const TerminalStep = ({
         onChange={handleValueChange}
         onKeyDown={handleKeyDown}
         type="text"
-        className="border-none bg-transparent caret-green-400 outline-none"
+        className="w-full border-none bg-red-400 bg-transparent caret-green-400 outline-none"
         autoComplete="off"
       />
     </div>
