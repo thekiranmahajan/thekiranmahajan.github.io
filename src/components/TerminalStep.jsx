@@ -16,8 +16,8 @@ const TerminalStep = ({
   return (
     <div className="flex h-10 w-full items-center">
       <p className="flex items-center">
-        <FaArrowRightLong className="text-lg text-teal-500" />
-        <span className="px-2 text-2xl">~</span>
+        <FaArrowRightLong className="text-teal-500 sm:text-lg" />
+        <span className="px-2 text-xl sm:text-2xl">~</span>
         <span className="text-nowrap pr-2 text-gray-400">
           Enter {stepName}:
         </span>
