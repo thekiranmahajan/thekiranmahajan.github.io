@@ -35,11 +35,6 @@ const TerminalContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(values);
-  };
-
   const handleResetValues = () => {
     setStepIndex(0);
     setValues({
@@ -48,6 +43,7 @@ const TerminalContactForm = () => {
       Message: "",
     });
   };
+
   return (
     <form
       id="contact-form"
@@ -112,7 +108,6 @@ const TerminalContactForm = () => {
 
         {stepIndex === CONTACT_FORM_STEPS.length && (
           <TerminalFormPreview
-            handleSubmit={handleSubmit}
             handleResetValues={handleResetValues}
             values={values}
           />

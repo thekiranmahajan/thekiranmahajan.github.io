@@ -141,3 +141,6 @@ export const CONTACT_FORM_STEPS = [
     validate: (value) => value.trim().length > 0,
   },
 ];
+
+// TerminalFormPreview
+export const EMAILJS_API_LINK = "https://api.emailjs.com/api/v1.0/email/send";
