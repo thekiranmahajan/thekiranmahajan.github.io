@@ -14,3 +14,4 @@ export { default as ScrollDown } from "./ScrollDown";
 export { default as Rocket } from "./Rocket";
 export { default as SocialCard } from "./SocialCard";
 export { default as TerminalContactForm } from "./TerminalContactForm";
+export { default as SkillBar } from "./SkillBar";

@@ -3,6 +3,7 @@ import {
   LogoItemsFlipper,
   SectionHeading,
   SectionSubHeading,
+  SkillBar,
 } from "../components";
 import { LOGO_ITEM_STYLES } from "../utils/constants";
 
@@ -24,6 +25,32 @@ const Skills = () => {
               label={logo.logoName}
             />
           ))}
+        />
+      </div>
+      <div>
+        <SkillBar
+          icon={LOGO_ITEM_STYLES[4].icon}
+          logoName={LOGO_ITEM_STYLES[4].logoName}
+        />
+        <SkillBar
+         percentage={40}
+          icon={LOGO_ITEM_STYLES[2].icon}
+          logoName={LOGO_ITEM_STYLES[2].logoName}
+        />
+        <SkillBar
+          icon={LOGO_ITEM_STYLES[1].icon}
+          logoName={LOGO_ITEM_STYLES[1].logoName}
+          percentage={10}
+        />
+        <SkillBar
+          icon={LOGO_ITEM_STYLES[5].icon}
+          logoName={LOGO_ITEM_STYLES[5].logoName}
+          percentage={80}
+        />
+        <SkillBar
+          icon={LOGO_ITEM_STYLES[8].icon}
+          logoName={LOGO_ITEM_STYLES[8].logoName}
+          percentage={70}
         />
       </div>
     </section>
