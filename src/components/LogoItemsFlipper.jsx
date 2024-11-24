@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { DELAY_IN_MS, TRANSITION_DURATION_IN_SEC } from "../utils/constants";
 
 const LogoItemsFlipper = ({ items }) => {

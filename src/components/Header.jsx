@@ -3,7 +3,7 @@ import { IoGridOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import NavLinks from "./NavLinks";
 import { HiMiniXMark } from "react-icons/hi2";
 import ScrollbarProgress from "./ScrollbarProgress";
-import { useScroll, useMotionValueEvent } from "framer-motion";
+import { useScroll, useMotionValueEvent } from "motion/react";
 import useTheme from "../hooks/useTheme";
 import useMenu from "../hooks/useMenu";
 

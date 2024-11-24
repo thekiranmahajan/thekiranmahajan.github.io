@@ -1,5 +1,5 @@
 import rocket from "../assets/rocket.webp";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const Rocket = () => {
   return (

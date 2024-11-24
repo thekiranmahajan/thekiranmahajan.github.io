@@ -1,4 +1,4 @@
-import { useScroll, motion, useSpring } from "framer-motion";
+import { useScroll, motion, useSpring } from "motion/react";
 const ScrollbarProgress = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 90, damping: 15 });
