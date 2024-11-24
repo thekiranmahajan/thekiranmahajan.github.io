@@ -1,7 +1,7 @@
 import { ArrowButton, SectionHeading, SectionSubHeading } from "../components";
 import avatar from "../assets/avatar.webp";
 import { GrCloudDownload } from "react-icons/gr";
-import { RESUME_LINK } from "../utils/constants";
+import resumePDF from "../assets/Kiran_Mahajan_Software_Development_Engineer.pdf";
 
 const About = () => {
   return (
@@ -42,7 +42,8 @@ const About = () => {
             <ArrowButton
               btnText="Resume"
               btnIcon={<GrCloudDownload />}
-              Link={RESUME_LINK}
+              Link={resumePDF}
+   
             />
           </div>
         </div>

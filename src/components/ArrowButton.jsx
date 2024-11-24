@@ -6,12 +6,19 @@ const ArrowButton = ({
   onClick = () => {},
   Link = "#",
 }) => {
+  const isFileLink =
+    Link.endsWith(".pdf") || Link.endsWith(".doc") || Link.endsWith(".txt");
+
   return (
     <a
       href={Link}
-      onClick={onClick}
+      onClick={(e) => {
+        if (Link === "#") e.preventDefault();
+        onClick(e);
+      }}
       role="button"
       aria-label={btnText}
+      download={isFileLink ? true : undefined}
       className="group relative flex h-10 w-28 items-center justify-center overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-base font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300"
     >
       {btnText}

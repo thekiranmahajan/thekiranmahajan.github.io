@@ -51,11 +51,7 @@ export const DELAY_IN_MS = 2500;
 export const TRANSITION_DURATION_IN_SEC = 1;
 
 // About section
-const GDRIVE_DOWNLOAD_LINK_FORMAT =
-  "https://drive.google.com/uc?export=download&id=";
 
-export const RESUME_LINK =
-  GDRIVE_DOWNLOAD_LINK_FORMAT + "1S_hIL7_4jRWWZiNDhVfddVXz5XmwKZk0";
 
 // SocialIcons
 export const SOCIAL_PROFILES = [
