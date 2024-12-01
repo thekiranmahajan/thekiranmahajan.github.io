@@ -7,7 +7,7 @@ const SkillBar = ({ logoName, icon: Icon, percentage = 100 }) => {
         <Icon className="text text-4xl" />
         <span className="select-none font-semibold">{logoName}</span>
       </div>
-      <div className="h-1 w-full overflow-hidden rounded-full bg-white">
+      <div className="h-1 w-full overflow-hidden rounded-full bg-gray-400 dark:bg-white">
         <motion.div
           className="h-1 rounded-full bg-light-blue dark:bg-custom-violet"
           initial={{ width: 0 }}
