@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const SkillBar = ({ logoName, icon: Icon, percentage = 100 }) => {
   return (
-    <div className="mt-2 flex w-64 flex-col gap-2 text-dark-blue dark:text-custom-yellow">
+    <div className="mt-2 flex flex-col gap-5 text-dark-blue dark:text-custom-yellow">
       <div className="flex items-center justify-between">
         <Icon className="text text-4xl" />
         <span className="select-none font-semibold">{logoName}</span>

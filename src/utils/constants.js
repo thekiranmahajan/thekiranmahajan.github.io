@@ -25,7 +25,9 @@ import {
   SiVite,
   SiWebpack,
 } from "react-icons/si";
+import { AiOutlineCode, AiOutlineTool } from "react-icons/ai";
 import { PiFigmaLogoFill } from "react-icons/pi";
+import { GoStack } from "react-icons/go";
 
 // NavLinks
 export const NAV_ITEMS = [
@@ -51,7 +53,6 @@ export const DELAY_IN_MS = 2500;
 export const TRANSITION_DURATION_IN_SEC = 1;
 
 // About section
-
 
 // SocialIcons
 export const SOCIAL_PROFILES = [
@@ -92,28 +93,110 @@ export const DURATION = 0.25;
 export const STAGGER = 0.025;
 
 //Skills
-export const LOGO_ITEM_STYLES = [
-  { logoName: "HTML5", styles: "bg-[#E44D26]", icon: IoLogoHtml5 },
-  { logoName: "CSS3", styles: "bg-[#264DE4]", icon: IoLogoCss3 },
-  { logoName: "JavaScript", styles: "bg-[#EFD81D]", icon: IoLogoJavascript },
-  { logoName: "React", styles: "bg-[#08D9FF]", icon: FaReact },
-  { logoName: "Tailwind CSS", styles: "bg-[#38BDF8]", icon: RiTailwindCssFill },
-  { logoName: "GitHub", styles: "bg-[#171515]", icon: IoLogoGithub },
-  { logoName: "Git", styles: "bg-[#E84D31]", icon: SiGit },
-  { logoName: "Node.js", styles: "bg-[#5FAE4B]", icon: IoLogoNodejs },
-  { logoName: "Redux", styles: "bg-[#7A50BE]", icon: SiRedux },
-  { logoName: "Figma", styles: "bg-[#12D086]", icon: PiFigmaLogoFill },
-  { logoName: "Babel", styles: "bg-[#F5DF63]", icon: SiBabel },
+export const ALL_SKILLS = [
+  {
+    logoName: "HTML5",
+    styles: "bg-[#E44D26]",
+    icon: IoLogoHtml5,
+    category: "languages",
+  },
+  {
+    logoName: "CSS3",
+    styles: "bg-[#264DE4]",
+    icon: IoLogoCss3,
+    category: "languages",
+  },
+  {
+    logoName: "JavaScript",
+    styles: "bg-[#EFD81D]",
+    icon: IoLogoJavascript,
+    category: "languages",
+  },
+  {
+    logoName: "React",
+    styles: "bg-[#08D9FF]",
+    icon: FaReact,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "Tailwind CSS",
+    styles: "bg-[#38BDF8]",
+    icon: RiTailwindCssFill,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "Node.js",
+    styles: "bg-[#5FAE4B]",
+    icon: IoLogoNodejs,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "Redux",
+    styles: "bg-[#7A50BE]",
+    icon: SiRedux,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "Babel",
+    styles: "bg-[#F5DF63]",
+    icon: SiBabel,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "Webpack",
+    styles: "bg-[#92D6FA]",
+    icon: SiWebpack,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "Vite",
+    styles: "bg-[#9F61FC]",
+    icon: SiVite,
+    category: "Libraries & Frameworks",
+  },
+  {
+    logoName: "GitHub",
+    styles: "bg-[#171515]",
+    icon: IoLogoGithub,
+    category: "Tools",
+  },
+  { logoName: "Git", styles: "bg-[#E84D31]", icon: SiGit, category: "Tools" },
+  {
+    logoName: "Figma",
+    styles: "bg-[#12D086]",
+    icon: PiFigmaLogoFill,
+    category: "Tools",
+  },
   {
     logoName: "Vercel",
     styles: "bg-[#FFFFFF] !text-black",
     icon: IoLogoVercel,
+    category: "Tools",
   },
-  { logoName: "Webpack", styles: "bg-[#92D6FA]", icon: SiWebpack },
-  { logoName: "Vite", styles: "bg-[#9F61FC]", icon: SiVite },
-  { logoName: "MongoDB", styles: "bg-[#499C3A]", icon: SiMongodb },
-  { logoName: "Box Open", styles: "bg-[#DFAF7B]", icon: FaBoxOpen },
-  { logoName: "Postman", styles: "bg-[#F26E39]", icon: SiPostman },
+  {
+    logoName: "MongoDB",
+    styles: "bg-[#499C3A]",
+    icon: SiMongodb,
+    category: "Tools",
+  },
+  {
+    logoName: "Parcel",
+    styles: "bg-[#DFAF7B]",
+    icon: FaBoxOpen,
+    category: "Tools",
+  },
+  {
+    logoName: "Postman",
+    styles: "bg-[#F26E39]",
+    icon: SiPostman,
+    category: "Tools",
+  },
+];
+
+export const TABS = [
+  { tabName: "languages", tabIcon: AiOutlineCode },
+  { tabName: "Libraries & Frameworks", tabIcon: GoStack },
+  { tabName: "Tools", tabIcon: AiOutlineTool },
 ];
 
 // TerminalContactForm

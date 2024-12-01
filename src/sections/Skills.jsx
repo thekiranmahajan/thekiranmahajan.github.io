@@ -3,21 +3,30 @@ import {
   LogoItemsFlipper,
   SectionHeading,
   SectionSubHeading,
-  SkillBar,
+  SkillTabs,
 } from "../components";
-import { LOGO_ITEM_STYLES } from "../utils/constants";
+import { ALL_SKILLS } from "../utils/constants";
 
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
+      className="flex min-h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
     >
       <SectionHeading headingText="Skills" />
       <SectionSubHeading subHeadingText="My Expertise" />
-      <div className="flex h-full w-full flex-col items-center justify-between gap-6 px-3 pt-10 sm:w-11/12 sm:flex-row sm:items-start sm:justify-evenly sm:gap-10 sm:pb-10 sm:pt-16 md:w-4/5 md:gap-14">
+      <div className="flex h-full w-full flex-col items-center gap-8 px-3 pt-10 sm:w-11/12 sm:flex-row sm:items-start sm:justify-center sm:pb-10 sm:pt-16 md:w-4/5 md:justify-between md:gap-14">
+        <div className="sm:pt-10 md:w-2/5">
+          <h2 className="text-xl font-semibold text-dark-blue sm:text-2xl dark:text-gray-100">
+            What I Bring to the Table.
+          </h2>
+          <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
+            Below are the languages, libraries, frameworks, and tools I use to
+            bring ideas to life.
+          </p>
+        </div>
         <LogoItemsFlipper
-          items={LOGO_ITEM_STYLES.map((logo) => (
+          items={ALL_SKILLS.map((logo) => (
             <LogoItem
               key={logo.logoName}
               className={logo.styles}
@@ -27,32 +36,7 @@ const Skills = () => {
           ))}
         />
       </div>
-      <div>
-        <SkillBar
-          icon={LOGO_ITEM_STYLES[4].icon}
-          logoName={LOGO_ITEM_STYLES[4].logoName}
-        />
-        <SkillBar
-         percentage={40}
-          icon={LOGO_ITEM_STYLES[2].icon}
-          logoName={LOGO_ITEM_STYLES[2].logoName}
-        />
-        <SkillBar
-          icon={LOGO_ITEM_STYLES[1].icon}
-          logoName={LOGO_ITEM_STYLES[1].logoName}
-          percentage={10}
-        />
-        <SkillBar
-          icon={LOGO_ITEM_STYLES[5].icon}
-          logoName={LOGO_ITEM_STYLES[5].logoName}
-          percentage={80}
-        />
-        <SkillBar
-          icon={LOGO_ITEM_STYLES[8].icon}
-          logoName={LOGO_ITEM_STYLES[8].logoName}
-          percentage={70}
-        />
-      </div>
+      <SkillTabs />
     </section>
   );
 };
