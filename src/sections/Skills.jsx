@@ -15,8 +15,8 @@ const Skills = () => {
     >
       <SectionHeading headingText="Skills" />
       <SectionSubHeading subHeadingText="My Expertise" />
-      <div className="flex h-full w-full flex-col items-center gap-8 px-3 pt-10 sm:w-11/12 sm:flex-row sm:items-start sm:justify-center sm:pb-10 sm:pt-16 md:w-4/5 md:justify-between md:gap-14">
-        <div className="sm:pt-10 md:w-2/5">
+      <div className="flex h-full w-full flex-col items-center gap-8 px-3 pt-10 text-center sm:w-11/12 sm:flex-row sm:items-start sm:justify-center sm:pb-10 sm:pt-16 sm:text-left md:w-3/4 md:justify-between md:gap-5 lg:w-3/5">
+        <div className="sm:pt-10 md:h-1/2">
           <h2 className="text-xl font-semibold text-dark-blue sm:text-2xl dark:text-gray-100">
             What I Bring to the Table.
           </h2>
@@ -25,16 +25,18 @@ const Skills = () => {
             bring ideas to life.
           </p>
         </div>
-        <LogoItemsFlipper
-          items={ALL_SKILLS.map((logo) => (
-            <LogoItem
-              key={logo.logoName}
-              className={logo.styles}
-              icon={logo.icon}
-              label={logo.logoName}
-            />
-          ))}
-        />
+        <div className="md:w-1/2">
+          <LogoItemsFlipper
+            items={ALL_SKILLS.map((logo) => (
+              <LogoItem
+                key={logo.logoName}
+                className={logo.styles}
+                icon={logo.icon}
+                label={logo.logoName}
+              />
+            ))}
+          />
+        </div>
       </div>
       <SkillTabs />
     </section>

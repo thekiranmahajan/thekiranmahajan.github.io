@@ -22,7 +22,7 @@ const LogoItemsFlipper = ({ items }) => {
         transform: "rotateY(20deg)",
         transformStyle: "preserve-3d",
       }}
-      className="relative z-0 h-44 w-60 shrink-0 rounded-xl border border-neutral-700 bg-neutral-800"
+      className="relative z-0 h-44 w-72 shrink-0 rounded-xl border border-light-blue bg-dark-blue dark:border-neutral-700 dark:bg-black"
       role="region"
       aria-roledescription="carousel"
       aria-label="Logo carousel"
@@ -74,7 +74,7 @@ const LogoItemsFlipper = ({ items }) => {
         style={{
           transform: "translateZ(1px)",
         }}
-        className="absolute left-0 right-0 top-1/2 z-[999] -translate-y-1/2 border-t-2 border-neutral-800"
+        className="absolute left-0 right-0 top-1/2 z-[999] -translate-y-1/2 border-t-2 border-dark-blue dark:border-black"
       />
     </div>
   );
