@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { NAV_ITEMS } from "../utils/constants";
 import NavItem from "./NavItem";
 
 const NavLinks = ({ handleMenuClose = () => {} }) => {
+  const [activeNavItem, setActiveNavItem] = useState("Home");
   return (
     <ul
       aria-label="Main navigation menu"
@@ -14,6 +16,8 @@ const NavLinks = ({ handleMenuClose = () => {} }) => {
           icon={item.icon}
           label={item.label}
           href={item.href}
+          activeNavItem={activeNavItem}
+          setActiveNavItem={setActiveNavItem}
         />
       ))}
     </ul>
