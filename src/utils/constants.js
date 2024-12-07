@@ -13,7 +13,7 @@ import {
   IoPersonOutline,
 } from "react-icons/io5";
 import { FiGithub, FiLinkedin, FiPhoneCall } from "react-icons/fi";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdOutlineEmail, MdWorkOutline } from "react-icons/md";
 import { FaBoxOpen, FaReact, FaXTwitter } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -215,10 +215,22 @@ export const ALL_SKILLS = [
   },
 ];
 
-export const TABS = [
+export const SKILL_TABS = [
   { tabName: "languages", tabIcon: AiOutlineCode },
   { tabName: "Libraries & Frameworks", tabIcon: GoStack },
   { tabName: "Tools", tabIcon: AiOutlineTool },
+];
+
+export const TAB_VARIANTS = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10 },
+};
+
+// Experience
+export const EXPERIENCE_TABS = [
+  { tabName: "Education", tabIcon: AiOutlineCode },
+  { tabName: "Work", tabIcon: MdWorkOutline },
 ];
 
 // TerminalContactForm

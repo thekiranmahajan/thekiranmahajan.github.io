@@ -1,5 +1,9 @@
 import { motion } from "motion/react";
-import { SectionHeading, SectionSubHeading } from "../components";
+import {
+  ExperienceTabs,
+  SectionHeading,
+  SectionSubHeading,
+} from "../components";
 import useSectionInView from "../hooks/useSectionInView";
 
 const Experience = () => {
@@ -12,6 +16,7 @@ const Experience = () => {
     >
       <SectionHeading headingText="Experience" />
       <SectionSubHeading subHeadingText="Career Path" />
+      <ExperienceTabs />
     </motion.section>
   );
 };

@@ -8,10 +8,7 @@ const useSectionInView = (sectionId) => {
   const isInView = useInView(sectionRef, { amount: 0.5 });
 
   useEffect(() => {
-    if (isInView) {
-      setActiveSection(sectionId);
-      console.log(sectionId);
-    }
+    if (isInView) setActiveSection(sectionId);
   }, [isInView, setActiveSection, sectionId]);
 
   return sectionRef;
