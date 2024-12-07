@@ -1,11 +1,15 @@
+import { motion } from "motion/react";
 import { ArrowButton, SectionHeading, SectionSubHeading } from "../components";
 import avatar from "../assets/avatar.webp";
 import { GrCloudDownload } from "react-icons/gr";
 import resumePDF from "../assets/Kiran_Mahajan_Software_Development_Engineer.pdf";
+import useSectionInView from "../hooks/useSectionInView";
 
 const About = () => {
+  const sectionRef = useSectionInView("about");
   return (
-    <section
+    <motion.section
+      ref={sectionRef}
       id="about"
       className="flex min-h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
     >
@@ -43,12 +47,11 @@ const About = () => {
               btnText="Resume"
               btnIcon={<GrCloudDownload />}
               Link={resumePDF}
-   
             />
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { SOCIAL_PROFILES } from "../utils/constants";
 import { copyToClipboard } from "../utils/helper";
 import {
@@ -7,16 +8,20 @@ import {
   TerminalContactForm,
 } from "../components";
 
+import useSectionInView from "../hooks/useSectionInView";
+
 const Contact = () => {
+  const sectionRef = useSectionInView("contact");
+
   const handleCopyEmail = (e) => {
     copyToClipboard(e, "thekiranmahajan@gmail.com");
   };
   const handleCopyPhoneNumber = (e) => {
     copyToClipboard(e, "+91 7758829165");
   };
-
   return (
-    <section
+    <motion.section
+      ref={sectionRef}
       id="contact"
       className="flex min-h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
     >
@@ -49,7 +54,7 @@ const Contact = () => {
           <TerminalContactForm />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

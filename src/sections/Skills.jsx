@@ -6,10 +6,13 @@ import {
   SkillTabs,
 } from "../components";
 import { ALL_SKILLS } from "../utils/constants";
-
+import { motion } from "motion/react";
+import useSectionInView from "../hooks/useSectionInView";
 const Skills = () => {
+  const sectionRef = useSectionInView("skills");
   return (
-    <section
+    <motion.section
+      ref={sectionRef}
       id="skills"
       className="flex min-h-screen w-full flex-col items-center py-10 md:py-14 lg:w-4/5 dark:text-white"
     >
@@ -39,7 +42,7 @@ const Skills = () => {
         </div>
       </div>
       <SkillTabs />
-    </section>
+    </motion.section>
   );
 };
 

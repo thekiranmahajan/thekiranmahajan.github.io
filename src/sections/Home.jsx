@@ -6,11 +6,15 @@ import {
   ScrollDown,
   Rocket,
 } from "../components";
+import { motion } from "motion/react";
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
+import useSectionInView from "../hooks/useSectionInView";
 
 const Home = () => {
+  const sectionRef = useSectionInView("home");
   return (
-    <section
+    <motion.section
+      ref={sectionRef}
       id="home"
       className="relative flex min-h-screen w-full flex-col items-center gap-5 p-10 px-4 text-black md:px-5 md:pt-44 lg:w-4/5 dark:text-white"
     >
@@ -40,7 +44,7 @@ const Home = () => {
         <Rocket />
       </div>
       <ScrollDown />
-    </section>
+    </motion.section>
   );
 };
 
