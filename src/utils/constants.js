@@ -15,7 +15,7 @@ import {
 import { FiGithub, FiLinkedin, FiPhoneCall } from "react-icons/fi";
 import { MdOutlineEmail, MdWorkOutline } from "react-icons/md";
 import { FaBoxOpen, FaReact, FaXTwitter } from "react-icons/fa6";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiGraduationCapLine, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiBabel,
   SiGit,
@@ -229,7 +229,7 @@ export const TAB_VARIANTS = {
 
 // Experience
 export const EXPERIENCE_TABS = [
-  { tabName: "Education", tabIcon: AiOutlineCode },
+  { tabName: "Education", tabIcon: RiGraduationCapLine },
   { tabName: "Work", tabIcon: MdWorkOutline },
 ];
 

@@ -10,13 +10,13 @@ const SkillTabs = () => {
   );
 
   return (
-    <div className="mt-10 flex h-full w-1/2 flex-col items-center p-2 md:w-3/4">
+    <div className="mt-10 flex h-full w-1/2 flex-col items-center justify-center p-2 md:w-3/4 lg:w-4/5">
       <div className="mb-5 flex h-20 items-center justify-center gap-5 md:gap-10">
         {SKILL_TABS.map(({ tabName, tabIcon: Icon }) => (
           <button
             key={tabName}
             onClick={() => setActiveTab(tabName)}
-            className={`relative flex flex-col items-center justify-center gap-2 p-2 pb-2 font-medium leading-5 md:text-lg md:leading-7 ${
+            className={`relative flex flex-col items-center justify-center gap-2 truncate p-2 pb-2 font-medium leading-5 md:text-lg md:leading-7 ${
               activeTab === tabName
                 ? "text-custom-violet dark:text-custom-yellow"
                 : "text-gray-500 dark:text-gray-100"
