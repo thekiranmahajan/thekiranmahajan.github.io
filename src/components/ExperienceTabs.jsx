@@ -6,33 +6,28 @@ import Timeline from "./Timeline";
 const ExperienceTabs = () => {
   const [activeTab, setActiveTab] = useState(EXPERIENCE_TABS[1]?.tabName);
   return (
-    <div className="mt-10 flex h-full w-full flex-col items-center p-2">
-      <div className="mb-5 flex h-20 w-1/2 items-center justify-center gap-5 md:gap-10">
+    <div className="container mt-10 flex-col items-center p-2">
+      <div className="mb-5 flex items-center justify-center gap-20">
         {EXPERIENCE_TABS.map(({ tabName, tabIcon: Icon }) => (
           <button
             key={tabName}
             onClick={() => setActiveTab(tabName)}
-            className={`relative flex w-full items-center justify-center gap-2 p-2 pb-2 font-medium leading-5 md:text-lg md:leading-7 ${
+            className={`relative flex items-center justify-center gap-3 p-2 pb-2 font-medium leading-5 md:text-lg md:leading-7 ${
               activeTab === tabName
                 ? "text-custom-violet dark:text-custom-yellow"
                 : "text-gray-500 dark:text-gray-100"
             }`}
           >
-            <Icon
-              className={`text-2xl md:text-3xl ${activeTab === tabName ? "text-light-blue" : ""}`}
-            />
+            <Icon className="text-2xl" />
             {tabName}
             {activeTab === tabName && (
-              <motion.div
-                layoutId="underline"
-                className="absolute bottom-0 left-0 right-0 h-0.5 rounded bg-light-blue"
-              />
+              <motion.div layoutId="underline" className="absolute" />
             )}
           </button>
         ))}
       </div>
 
-      <div className="h-full sm:w-10/12 md:mt-2">
+      <div className="h-full w-full md:mt-2">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}

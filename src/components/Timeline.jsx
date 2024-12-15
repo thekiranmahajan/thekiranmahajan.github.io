@@ -4,7 +4,7 @@ import { EXPERIENCE } from "../utils/constants";
 const Timeline = ({ type }) => {
   return (
     <div className="relative mx-auto flex flex-col space-y-8 px-6">
-      <div className="line absolute inset-0 left-8 h-full w-2 rounded-xl bg-custom-violet shadow-md md:left-0 md:right-0 md:mx-auto" />
+      <div className="line absolute inset-0 left-8 h-full w-2 rounded-xl bg-gradient-to-t from-light-blue to-custom-violet shadow-md md:left-0 md:right-0 md:mx-auto" />
       {type == "work"
         ? EXPERIENCE.work.map(
             (
