@@ -28,6 +28,9 @@ import {
 import { AiOutlineCode, AiOutlineTool } from "react-icons/ai";
 import { PiFigmaLogoFill } from "react-icons/pi";
 import { GoStack } from "react-icons/go";
+import schoolLogo from "../assets/school-logo.png";
+import sgbauLogo from "../assets/sgbau-logo.png";
+import ansrsourceLogo from "../assets/ansrsource-logo.png";
 
 // NavLinks
 export const NAV_ITEMS = [
@@ -257,3 +260,49 @@ export const CONTACT_FORM_STEPS = [
 
 // TerminalFormPreview
 export const EMAILJS_API_LINK = "https://api.emailjs.com/api/v1.0/email/send";
+
+// ExperienceTabs
+export const EXPERIENCE = {
+  education: [
+    {
+      logo: sgbauLogo,
+      institution: "Sant Gadge Baba Amravati University",
+      duration: "July 2020 — June 2024",
+      degree: "Bachelor of Engineering in Computer Science and Engineering",
+      score: "7.93 CGPA",
+      location: "Malkapur, Maharashtra",
+    },
+    {
+      logo: schoolLogo,
+      institution: "J. E. School & Junior College",
+      duration: "July 2019 — May 2020",
+      degree: "Senior Secondary (HSC)",
+      score: "60.31%",
+      location: "Muktainagar, Maharashtra",
+    },
+    {
+      logo: schoolLogo,
+      institution: "Sardar G. G. Highschool",
+      duration: "June 2017 — May 2018",
+      degree: "Junior Secondary (SSC)",
+      score: "78.4%",
+      location: "Raver, Maharashtra",
+    },
+  ],
+  work: [
+    {
+      logo: ansrsourceLogo,
+      position: "Junior Developer-Consultant",
+      duration: "Jan 2025 — Present",
+      organization: "ansrsource",
+      location: "Austin - Remote",
+    },
+    {
+      logo: ansrsourceLogo,
+      position: "Junior Developer Intern",
+      duration: "July 2024 — December 2024",
+      organization: "ansrsource",
+      location: "Austin - Remote",
+    },
+  ],
+};
