@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { EXPERIENCE_TABS, TAB_VARIANTS } from "../utils/constants";
 import { motion, AnimatePresence } from "motion/react";
+import Timeline from "./Timeline";
 
 const ExperienceTabs = () => {
   const [activeTab, setActiveTab] = useState(EXPERIENCE_TABS[1]?.tabName);
   return (
-    <div className="mt-10 flex h-full w-1/2 flex-col items-center p-2 md:w-3/4">
+    <div className="mt-10 flex h-full w-full flex-col items-center p-2">
       <div className="mb-5 flex h-20 w-1/2 items-center justify-center gap-5 md:gap-10">
         {EXPERIENCE_TABS.map(({ tabName, tabIcon: Icon }) => (
           <button
@@ -31,7 +32,7 @@ const ExperienceTabs = () => {
         ))}
       </div>
 
-      <div className="h-full w-[17rem] sm:w-96 md:mt-2">
+      <div className="h-full sm:w-10/12 md:mt-2">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -42,9 +43,11 @@ const ExperienceTabs = () => {
             transition={{ duration: 0.3 }}
             className="relative h-full w-full text-gray-700"
           >
-            {EXPERIENCE_TABS.map(({ tabName }) => (
-              <h3 key={tabName}>{tabName}</h3>
-            ))}
+            {activeTab === "Work" ? (
+              <Timeline type="work" />
+            ) : (
+              <Timeline type="education" />
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

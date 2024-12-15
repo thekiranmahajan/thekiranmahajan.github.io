@@ -266,6 +266,7 @@ export const EXPERIENCE = {
   education: [
     {
       logo: sgbauLogo,
+      link: "https://sgbau.ac.in/",
       institution: "Sant Gadge Baba Amravati University",
       duration: "July 2020 — June 2024",
       degree: "Bachelor of Engineering in Computer Science and Engineering",
@@ -274,6 +275,7 @@ export const EXPERIENCE = {
     },
     {
       logo: schoolLogo,
+      link: "https://schools.org.in/jalgaon/27031103410/j-e-sch-&-junior-college.html",
       institution: "J. E. School & Junior College",
       duration: "July 2019 — May 2020",
       degree: "Senior Secondary (HSC)",
@@ -282,6 +284,7 @@ export const EXPERIENCE = {
     },
     {
       logo: schoolLogo,
+      link: "https://schools.org.in/jalgaon/27031408310/sardar-g-g-high-sch-raver.html",
       institution: "Sardar G. G. Highschool",
       duration: "June 2017 — May 2018",
       degree: "Junior Secondary (SSC)",
@@ -292,6 +295,7 @@ export const EXPERIENCE = {
   work: [
     {
       logo: ansrsourceLogo,
+      link: "https://ansrsource.com/",
       position: "Junior Developer-Consultant",
       duration: "Jan 2025 — Present",
       organization: "ansrsource",
@@ -299,6 +303,7 @@ export const EXPERIENCE = {
     },
     {
       logo: ansrsourceLogo,
+      link: "https://ansrsource.com/",
       position: "Junior Developer Intern",
       duration: "July 2024 — December 2024",
       organization: "ansrsource",
