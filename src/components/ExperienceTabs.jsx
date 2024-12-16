@@ -7,22 +7,30 @@ const ExperienceTabs = () => {
   const [activeTab, setActiveTab] = useState(EXPERIENCE_TABS[1]?.tabName);
   return (
     <div className="container mt-10 flex-col items-center p-2">
-      <div className="mb-5 flex items-center justify-center gap-20">
+      <div className="flex items-center justify-center gap-20">
         {EXPERIENCE_TABS.map(({ tabName, tabIcon: Icon }) => (
           <button
             key={tabName}
             onClick={() => setActiveTab(tabName)}
-            className={`relative flex items-center justify-center gap-3 p-2 pb-2 font-medium leading-5 md:text-lg md:leading-7 ${
+            className={`${
               activeTab === tabName
-                ? "text-custom-violet dark:text-custom-yellow"
-                : "text-gray-500 dark:text-gray-100"
-            }`}
+                ? "text-white dark:text-custom-violet"
+                : "hover:opacity-70"
+            } relative flex items-center justify-center rounded-full px-4 py-2 font-medium text-dark-blue duration-300 md:text-lg dark:text-gray-100`}
           >
-            <Icon className="text-2xl" />
-            {tabName}
             {activeTab === tabName && (
-              <motion.div layoutId="underline" className="absolute" />
+              <motion.div
+                layoutId="active-pill"
+                className="absolute inset-0 bg-light-blue dark:bg-custom-yellow"
+                style={{ borderRadius: 9999 }}
+                transition={{ duration: 0.5 }}
+              />
             )}
+
+            <span className="relative z-10 flex gap-3">
+              <Icon className="text-2xl" />
+              {tabName}
+            </span>
           </button>
         ))}
       </div>
