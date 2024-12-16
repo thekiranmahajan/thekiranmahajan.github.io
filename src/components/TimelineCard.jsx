@@ -28,16 +28,27 @@ const TimelineCard = ({
         ></div>
 
         <div
-          className={`${index % 2 === 1 ? "" : "md:-top-2 md:left-0.5"} relative -left-1 rounded-lg bg-slate-100 p-6 shadow-lg xs:-top-1 xs:left-0`}
+          className={`${index % 2 === 1 ? "" : "md:-top-2 md:left-0.5"} relative -left-1 rounded-lg border border-gray-200 bg-white p-6 shadow-xl xs:-top-1 xs:left-0`}
         >
-          <h4 className="text-sm font-semibold text-dark-blue">
-            {score && <span>{score}</span>} {degree}
+          <h4 className="mb-1 font-bold text-gray-800">
+            <span className="text-sm font-medium text-gray-700 md:text-base">
+              {degree}
+            </span>{" "}
+            {score && (
+              <span className="text-xs font-extrabold italic text-custom-violet md:text-sm">
+                ({score})
+              </span>
+            )}
           </h4>
-          <h5 className="text-xs text-light-blue">
-            {institution},{" "}
-            <span className="text-custom-violet">{location}</span>
+
+          <h5 className="mb-1 text-xs leading-relaxed text-gray-600 md:text-sm">
+            <span className="text-gray-800">{institution}</span>,{" "}
+            <span className="text-custom-violet">({location})</span>
           </h5>
-          <p className="text-xs">{duration}</p>
+
+          <p className="mt-3 text-xs font-semibold tracking-wide text-gray-500 md:text-sm">
+            {duration}
+          </p>
         </div>
       </div>
     </div>
