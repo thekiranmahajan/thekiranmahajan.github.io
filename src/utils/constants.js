@@ -123,49 +123,49 @@ export const ALL_SKILLS = [
     styles: "bg-[#08D9FF]",
     icon: FaReact,
     percentage: 80,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "Tailwind CSS",
     styles: "bg-[#38BDF8]",
     icon: RiTailwindCssFill,
     percentage: 97,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "Node.js",
     styles: "bg-[#5FAE4B]",
     icon: IoLogoNodejs,
     percentage: 60,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "Redux",
     styles: "bg-[#7A50BE]",
     icon: SiRedux,
     percentage: 60,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "Babel",
     styles: "bg-[#F5DF63]",
     icon: SiBabel,
     percentage: 70,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "Webpack",
     styles: "bg-[#92D6FA]",
     icon: SiWebpack,
     percentage: 70,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "Vite",
     styles: "bg-[#9F61FC]",
     icon: SiVite,
     percentage: 86,
-    category: "Libraries & Frameworks",
+    category: "Frameworks",
   },
   {
     logoName: "GitHub",
@@ -220,7 +220,7 @@ export const ALL_SKILLS = [
 
 export const SKILL_TABS = [
   { tabName: "languages", tabIcon: AiOutlineCode },
-  { tabName: "Libraries & Frameworks", tabIcon: GoStack },
+  { tabName: "Frameworks", tabIcon: GoStack },
   { tabName: "Tools", tabIcon: AiOutlineTool },
 ];
 
