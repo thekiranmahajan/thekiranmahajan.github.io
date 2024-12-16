@@ -2,6 +2,7 @@ import { useState } from "react";
 import { EXPERIENCE_TABS, TAB_VARIANTS } from "../utils/constants";
 import { motion, AnimatePresence } from "motion/react";
 import Timeline from "./Timeline";
+import { spring } from "motion";
 
 const ExperienceTabs = () => {
   const [activeTab, setActiveTab] = useState(EXPERIENCE_TABS[1]?.tabName);
@@ -14,7 +15,7 @@ const ExperienceTabs = () => {
             onClick={() => setActiveTab(tabName)}
             className={`${
               activeTab === tabName
-                ? "text-white dark:text-custom-violet"
+                ? "text-white dark:!text-gray-900"
                 : "hover:opacity-70"
             } relative flex items-center justify-center rounded-full px-4 py-2 font-medium text-dark-blue duration-300 md:text-lg dark:text-gray-100`}
           >
@@ -23,7 +24,7 @@ const ExperienceTabs = () => {
                 layoutId="active-pill"
                 className="absolute inset-0 bg-light-blue dark:bg-custom-yellow"
                 style={{ borderRadius: 9999 }}
-                transition={{ duration: 0.5 }}
+                transition={{ type: spring, duration: 0.6 }}
               />
             )}
 

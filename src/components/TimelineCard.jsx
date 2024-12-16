@@ -24,11 +24,11 @@ const TimelineCard = ({
         className={`${index % 2 === 1 ? "xs:pl-9 md:ml-auto md:pl-6" : "xs:pl-9 md:mr-auto md:pr-6"} relative pt-3 xs:pt-0 md:w-1/2`}
       >
         <div
-          className={`${index % 2 === 1 ? "md:left-4" : "md:left-auto md:right-3 md:pl-7"} absolute inset-0 left-1 top-1 h-4 w-4 rotate-45 transform rounded-sm bg-slate-500 shadow-lg xs:left-7`}
+          className={`${index % 2 === 1 ? "md:left-4" : "md:left-auto md:right-[0.85rem] md:top-0 md:pl-7"} absolute inset-0 left-1 top-1 h-4 w-4 rotate-45 transform rounded-sm bg-slate-500 shadow-lg xs:left-7`}
         ></div>
 
         <div
-          className={`${index % 2 === 1 ? "" : "md:left-0.5"} relative -left-1 rounded-lg bg-slate-100 p-6 shadow-lg xs:-top-1 xs:left-0`}
+          className={`${index % 2 === 1 ? "" : "md:-top-2 md:left-0.5"} relative -left-1 rounded-lg bg-slate-100 p-6 shadow-lg xs:-top-1 xs:left-0`}
         >
           <h4 className="text-sm font-semibold text-dark-blue">
             {score && <span>{score}</span>} {degree}
