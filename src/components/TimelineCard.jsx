@@ -11,7 +11,7 @@ const TimelineCard = ({
   return (
     <div className="relative">
       <div className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border-2 border-custom-violet bg-white duration-300 hover:scale-105 xs:absolute md:left-0 md:right-0 md:mx-auto dark:border-custom-yellow">
-        <a href={link || "#"}>
+        <a href={link || "#"} target="_blank">
           <img
             src={logo}
             alt="ansrsource logo"
