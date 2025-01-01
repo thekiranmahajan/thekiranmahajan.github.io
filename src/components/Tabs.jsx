@@ -18,7 +18,12 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
               layoutId="active-pill"
               className="absolute inset-0 bg-light-blue dark:bg-custom-yellow"
               style={{ borderRadius: 9999 }}
-              transition={{ type: "spring", duration: 0.6 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+                duration: 0.6,
+              }}
             />
           )}
 

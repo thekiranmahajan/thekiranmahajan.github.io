@@ -17,3 +17,4 @@ export { default as TerminalContactForm } from "./TerminalContactForm";
 export { default as SkillBar } from "./SkillBar";
 export { default as SkillTabs } from "./SkillTabs";
 export { default as ExperienceTabs } from "./ExperienceTabs";
+export { default as ProjectCard } from "./ProjectCard";
