@@ -1,6 +1,6 @@
-import ArrowButtonSpan from "./ArrowButtonSpan";
+import AnimatedButtonSpan from "./AnimatedButtonSpan";
 
-const ArrowButton = ({
+const AnimatedButton = ({
   btnIcon,
   btnText = "",
   onClick = () => {},
@@ -23,11 +23,11 @@ const ArrowButton = ({
     >
       {btnText}
 
-      <ArrowButtonSpan className="bg-dark-blue duration-1000 group-hover:duration-500 dark:bg-white" />
+      <AnimatedButtonSpan className="bg-dark-blue duration-1000 group-hover:duration-500 dark:bg-white" />
 
-      <ArrowButtonSpan className="bg-custom-yellow duration-700 group-hover:duration-700 dark:bg-light-blue" />
+      <AnimatedButtonSpan className="bg-custom-yellow duration-700 group-hover:duration-700 dark:bg-light-blue" />
 
-      <ArrowButtonSpan className="bg-light-blue duration-500 group-hover:duration-1000 dark:bg-custom-yellow" />
+      <AnimatedButtonSpan className="bg-light-blue duration-500 group-hover:duration-1000 dark:bg-custom-yellow" />
 
       <span
         aria-hidden="true"
@@ -39,4 +39,4 @@ const ArrowButton = ({
   );
 };
 
-export default ArrowButton;
+export default AnimatedButton;

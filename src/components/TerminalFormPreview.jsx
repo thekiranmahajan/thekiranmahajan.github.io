@@ -1,5 +1,5 @@
 import { MdOutlineRestartAlt } from "react-icons/md";
-import ArrowButton from "./ArrowButton";
+import AnimatedButton from "./AnimatedButton";
 import { LuSendHorizonal } from "react-icons/lu";
 import { EMAILJS_API_LINK } from "../utils/constants";
 
@@ -52,13 +52,13 @@ const TerminalFormPreview = ({ handleResetValues, values }) => {
       <p>Message: {message}</p>
       <h2>looks good?</h2>
       <div className="flex items-center gap-2">
-        <ArrowButton
+        <AnimatedButton
           Link="#contact-form"
           btnIcon={<MdOutlineRestartAlt />}
           btnText="Reset"
           onClick={handleResetValues}
         />
-        <ArrowButton
+        <AnimatedButton
           Link="#contact-form"
           btnIcon={<LuSendHorizonal />}
           btnText="Send It"

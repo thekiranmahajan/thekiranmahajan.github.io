@@ -1,4 +1,4 @@
-const ArrowButtonSpan = ({ className }) => {
+const AnimatedButtonSpan = ({ className }) => {
   return (
     <span
       aria-hidden="true"
@@ -7,4 +7,4 @@ const ArrowButtonSpan = ({ className }) => {
   );
 };
 
-export default ArrowButtonSpan;
+export default AnimatedButtonSpan;

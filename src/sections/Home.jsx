@@ -1,7 +1,7 @@
 import {
   EncryptTextEffectV2,
   FlipTextEffect,
-  ArrowButton,
+  AnimatedButton,
   SocialIcons,
   ScrollDown,
   Rocket,
@@ -34,7 +34,7 @@ const Home = () => {
             <SocialIcons />
           </div>
           <div className="mt-5 pl-2">
-            <ArrowButton
+            <AnimatedButton
               btnText="Contact"
               btnIcon={<MdOutlineConnectWithoutContact />}
               Link="#contact"

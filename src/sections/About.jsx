@@ -1,5 +1,9 @@
 import { motion } from "motion/react";
-import { ArrowButton, SectionHeading, SectionSubHeading } from "../components";
+import {
+  AnimatedButton,
+  SectionHeading,
+  SectionSubHeading,
+} from "../components";
 import avatar from "../assets/avatar.webp";
 import { GrCloudDownload } from "react-icons/gr";
 import resumePDF from "../assets/Kiran_Mahajan_Software_Development_Engineer.pdf";
@@ -43,7 +47,7 @@ const About = () => {
             aesthetically pleasing.
           </p>
           <div className="mt-6 flex items-center justify-center sm:justify-start xl:mt-12">
-            <ArrowButton
+            <AnimatedButton
               btnText="Resume"
               btnIcon={<GrCloudDownload />}
               Link={resumePDF}
