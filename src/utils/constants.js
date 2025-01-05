@@ -31,7 +31,10 @@ import { GoStack } from "react-icons/go";
 import schoolLogo from "../assets/school-logo.png";
 import sgbauLogo from "../assets/sgbau-logo.png";
 import ansrsourceLogo from "../assets/ansrsource-logo.png";
-
+import tandooriJsPoster from "../assets/tandoori-js.webp";
+import witchatPoster from "../assets/witchat.webp";
+import pinsavePoster from "../assets/pinsave.webp";
+import fundversePoster from "../assets/fundverse.webp";
 // NavLinks
 export const NAV_ITEMS = [
   { icon: IoHomeOutline, label: "Home", href: "#home" },
@@ -54,8 +57,6 @@ export const DELAY_TIME = 1500;
 // LogoItemsFlipper
 export const DELAY_IN_MS = 2500;
 export const TRANSITION_DURATION_IN_SEC = 1;
-
-// About section
 
 // SocialIcons
 export const SOCIAL_PROFILES = [
@@ -311,3 +312,44 @@ export const EXPERIENCE = {
     },
   ],
 };
+
+// Project Section
+
+export const PROJECTS = [
+  {
+    title: "Tandoori Js",
+    description:
+      "A food ordering platform built with React.js, Redux Toolkit, and Tailwind CSS, featuring dynamic UI, real-time Swiggy API integration, and custom functionalities like a multi-image carousel.",
+    poster: tandooriJsPoster,
+    duration: "January 2024 - Jun 2024",
+    live: "https://tandoori-js.vercel.app/",
+    repo: "https://github.com/thekiranmahajan/tandoori-js",
+  },
+  {
+    title: "WitChat",
+    description:
+      "A real-time chat application developed with the MERN stack and Socket.io, incorporating secure authentication, responsive design, and avatar management with Cloudinary.",
+    poster: witchatPoster,
+    duration: "March 2024 - April 2024",
+    live: "http://wit-chat.onrender.com/",
+    repo: "https://github.com/thekiranmahajan/wit-chat",
+  },
+  {
+    title: "FundVerse",
+    description:
+      "A blockchain crowdfunding platform combining social features with campaign management, leveraging Solidity, React.js, and Tailwind CSS for an innovative user experience.",
+    poster: fundversePoster,
+    duration: "September 2023 - March 2024",
+    live: "https://fundverse-by-us.vercel.app/",
+    repo: "https://github.com/thekiranmahajan/FundVerse",
+  },
+  {
+    title: "Pinsave",
+    description:
+      "A Pinterest-like web app for image-based posts with real-time updates, built using Node.js, Express.js, and Tailwind CSS, with secure authentication via Passport.",
+    poster: pinsavePoster,
+    duration: "December 2023 - January 2024",
+    live: "https://pinsave-by-ray.onrender.com/",
+    repo: "https://github.com/thekiranmahajan/pinsave",
+  },
+];
