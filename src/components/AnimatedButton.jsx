@@ -5,6 +5,7 @@ const AnimatedButton = ({
   btnText = "",
   onClick = () => {},
   Link = "#",
+  size = "h-10 w-28",
 }) => {
   const isFileLink =
     Link.endsWith(".pdf") || Link.endsWith(".doc") || Link.endsWith(".txt");
@@ -17,9 +18,10 @@ const AnimatedButton = ({
         onClick(e);
       }}
       role="button"
+      target={Link !== "#" ? "_blank" : "_self"}
       aria-label={btnText}
       download={isFileLink ? true : undefined}
-      className="group relative flex h-10 w-28 items-center justify-center overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-base font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300"
+      className={`group relative flex items-center justify-center overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-base font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300 ${size}`}
     >
       {btnText}
 

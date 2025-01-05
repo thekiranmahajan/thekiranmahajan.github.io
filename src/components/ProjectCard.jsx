@@ -5,11 +5,14 @@ import {
   useMotionValue,
   useSpring,
 } from "motion/react";
+import { AnimatedButton } from ".";
+import { ImGithub } from "react-icons/im";
+import { FaEye } from "react-icons/fa6";
 
 const ROTATION_RANGE = 18;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, description, duration, poster, live, repo }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -52,26 +55,45 @@ const ProjectCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-80 w-2/5 rounded-xl bg-gradient-to-br from-light-blue to-custom-violet"
+      className="relative h-80 w-full max-w-xl rounded-xl bg-gradient-to-br from-light-blue to-custom-violet"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+        className="absolute inset-4 overflow-hidden rounded-xl bg-white shadow-lg"
       >
-        <div>
-          <img src="" alt="" />
+        <img className="h-full w-full object-cover" src={poster} alt={title} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-4 text-white">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <p className="text-sm text-gray-300">{description}</p>
+
+          <div
+            style={{
+              transform: "translateZ(50px)",
+            }}
+            className="flex items-center justify-between"
+          >
+            <p className="mt-1 truncate text-sm text-gray-400">{duration}</p>
+            <div className="flex space-x-4">
+              <AnimatedButton
+                btnIcon={<FaEye />}
+                btnText="Live"
+                Link={live}
+                size="w-12 h-8"
+              />
+              <AnimatedButton
+                btnIcon={<ImGithub />}
+                btnText="Repo"
+                Link={repo}
+                size="w-12 h-8"
+              />
+            </div>
+          </div>
         </div>
-        <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
-          className="text-center text-2xl font-bold"
-        >
-          Work in Progress...
-        </p>
       </div>
     </motion.div>
   );
