@@ -9,16 +9,26 @@ const AnimatedButton = ({
 }) => {
   const isFileLink =
     Link.endsWith(".pdf") || Link.endsWith(".doc") || Link.endsWith(".txt");
+  const isScrollLink = Link.startsWith("#");
+
+  const handleClick = (e) => {
+    if (Link === "#") {
+      e.preventDefault();
+      onClick(e);
+    } else if (isScrollLink) {
+      e.preventDefault();
+      document.querySelector(Link).scrollIntoView({ behavior: "smooth" });
+    } else {
+      onClick(e);
+    }
+  };
 
   return (
     <a
       href={Link}
-      onClick={(e) => {
-        if (Link === "#") e.preventDefault();
-        onClick(e);
-      }}
+      onClick={handleClick}
       role="button"
-      target={Link !== "#" ? "_blank" : "_self"}
+      target={!isScrollLink && Link !== "#" ? "_blank" : "_self"}
       aria-label={btnText}
       download={isFileLink ? true : undefined}
       className={`group relative flex items-center justify-center overflow-hidden rounded-md border-none bg-gradient-to-r from-custom-violet to-light-blue p-2 text-base font-medium text-white shadow-md ring-gray-600 transition-all duration-300 active:scale-90 active:ring-2 dark:ring-gray-300 ${size}`}
