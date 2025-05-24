@@ -22,6 +22,7 @@ import {
   SiMongodb,
   SiPostman,
   SiRedux,
+  SiTypescript,
   SiVite,
   SiWebpack,
 } from "react-icons/si";
@@ -35,6 +36,7 @@ import tandooriJsPoster from "../assets/tandoori-js.webp";
 import witchatPoster from "../assets/witchat.webp";
 import pinsavePoster from "../assets/pinsave.webp";
 import fundversePoster from "../assets/fundverse.webp";
+import { TbView360Number } from "react-icons/tb";
 // NavLinks
 export const NAV_ITEMS = [
   { icon: IoHomeOutline, label: "Home", href: "#home" },
@@ -117,6 +119,13 @@ export const ALL_SKILLS = [
     styles: "bg-[#EFD81D]",
     icon: IoLogoJavascript,
     percentage: 80,
+    category: "languages",
+  },
+  {
+    logoName: "TypeScript",
+    styles: "bg-[#0076C6]",
+    icon: SiTypescript,
+    percentage: 40,
     category: "languages",
   },
   {
@@ -217,6 +226,13 @@ export const ALL_SKILLS = [
     percentage: 80,
     category: "Tools",
   },
+  {
+    logoName: "Storyline 360",
+    styles: "bg-[#BE5EAE]",
+    icon: TbView360Number,
+    percentage: 50,
+    category: "Tools",
+  },
 ];
 
 export const SKILL_TABS = [
@@ -297,8 +313,16 @@ export const EXPERIENCE = {
     {
       logo: ansrsourceLogo,
       link: "https://ansrsource.com/",
+      position: "Developer",
+      duration: "April 2025 — Present",
+      organization: "ansrsource",
+      location: "Austin - Remote",
+    },
+    {
+      logo: ansrsourceLogo,
+      link: "https://ansrsource.com/",
       position: "Junior Developer-Consultant",
-      duration: "Jan 2025 — Present",
+      duration: "January 2025 — March 2025",
       organization: "ansrsource",
       location: "Austin - Remote",
     },
